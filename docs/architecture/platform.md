@@ -8,23 +8,34 @@ Shared product and architecture facts for every repository and every agent. Prod
 
 ## The product in one sentence
 
-A.spectra is an **execution overlay** for clients (companies, projects) who want to run their test cases
-without building an automation framework. From the web console, `qa-platformFE`, they configure executions
-(API, web, mobile and database). The customer's test management system (TMS) stays the source of truth:
-the platform imports selected cases from it, normalizes them to the canonical model using the steps of
-`qa-platformCore`, requires a human to review and approve them, runs them, stores the evidence, and
-writes the results back to where the cases came from. Locally written `.feature` files can be imported
-the same way.
+**A·Spectra is the automation framework a team does not have to build.** A QA whose test case is a title
+and an ID writes the step-by-step in Gherkin against a ready-made step catalog for API, Web, Mobile and
+Database, runs it, and gets a result with evidence, reported back against the ID. Product scope is defined
+in [../alcance.md](../alcance.md), the only source of truth for it; requirements derived from it are in
+[../requirements.md](../requirements.md).
 
-**Release scope.** The canonical scope is [../alcance.md](../alcance.md); if this summary and it disagree,
-`alcance.md` wins. What ships when:
-- **1.0:** Jira + Xray, Server/DC and Cloud, AI off, sign-up activated by an admin. Mobile runs on Android
-  emulators and iOS simulators through the mobile agent. Imports from Postman collections, Swagger/OpenAPI
-  specs and user stories (`qa-platformFE` `features/imports`) are also part of 1.0.
-- **Later:** TestRail has its own release.
-- Azure DevOps has no import adapter; never claim it.
+- **One runtime, several entry doors** (alcance §1.2): a test-management connector, a `.feature` upload, a
+  Postman/Swagger/user-story import, and native authoring. Every door converges on one stored scenario model.
+- **Review is a convention of the console flow, not an invariant of the backend** (alcance §1.3,
+  provisional until machine access ships at MVP-1.0.1). Say that the console asks for a review before a run;
+  never say that a scenario cannot run without one. The one hard control is the protected environment.
+- **The test management system is optional** (alcance §1.4). It is the source of truth only for cases that
+  originated there; A·Spectra never writes steps, Gherkin, new cases or defects into it, only results and
+  evidence. A missing integration never blocks a run.
+- **AI is an accelerator the customer may switch on, never the product** (alcance §8). The AI rules in
+  [../development/engineering-rules.md](../development/engineering-rules.md) hold in full.
 
-That sentence constrains every architectural choice. The product's value claim is that a machine did not decide anything a human did not approve.
+**Scope as configuration** (alcance §13.1). The values that make the scope true in a running system:
+
+| Scope item | Configuration (`qa-platformBE` `application.yml`) | Default |
+|---|---|---|
+| Offered test management systems | `integration.offered-providers` (`INTEGRATION_OFFERED_PROVIDERS`) | `JIRA_XRAY,JIRA_XRAY_CLOUD` |
+| Offered database engines | `integration.offered-database-engines` (`INTEGRATION_OFFERED_DATABASE_ENGINES`) | `postgresql,sqlserver,oracle` |
+| AI | `ai.enabled` (`AI_ENABLED`) | `false` |
+
+Integration scope (alcance §4.4, §7): Jira + Xray Server/Data Center and Cloud are built and offered;
+TestRail is built and in scope, hidden behind the gates above; Jira without Xray is in scope and not built;
+Azure DevOps is never claimed. Machine access (public API, CLI, service accounts) is deferred to MVP-1.0.1.
 
 Execution coverage: HTTP/API, Web, Mobile, Database.
 

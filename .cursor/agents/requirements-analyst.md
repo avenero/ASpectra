@@ -44,17 +44,17 @@ propose how to build it. You find out what "it" actually is.
 
 Do not ask a question `AGENTS.md` already settles - state it as a fact instead.
 
-- **The product is an execution overlay, not a test management system.** The customer's TMS
-  (Jira/Xray today) stays the source of truth. The platform imports selected cases, normalizes
-  them to a canonical model, requires a human to review and approve them, executes them through
-  `qa-platformCore`, stores evidence, and writes results back. A requirement that skips the human
-  review step, or that treats the canonical model as the new source of truth, contradicts the
-  product's own premise - flag it, don't implement it quietly.
-- **1.0 scope is fixed (workspace `CLAUDE.md`/`AGENTS.md`):** Jira + Xray Server/DC only, AI off by default, sign-up
-  activated by an admin, mobile on Android emulators and iOS simulators through the mobile agent.
-  TestRail is a later release. Postman, Swagger and user-story imports come in 1.1. **Jira + Xray
-  Cloud stays hidden in 1.0.** **Azure DevOps has no import adapter at all** - a requirement that
-  assumes it exists is out of scope, not a design question.
+- **The product is the automation framework a team does not have to build, not a test management
+  system.** Scope is defined only in `docs/alcance.md`, restated as numbered requirements in
+  `docs/requirements.md`; cite a requirement ID (for example `REV-08`) instead of restating scope. There
+  are several entry doors (connector, `.feature`, Postman/Swagger/user story, native authoring) into one
+  stored scenario model. Review is a convention of the console flow, not an enforced gate (alcance §1.3):
+  do not flag a requirement only because it skips review. A·Spectra never writes steps, Gherkin, new cases
+  or defects into the customer's test management system - flag a requirement that does.
+- **What ships when is decided in `docs/alcance.md`** and in the scope-as-configuration table of
+  `docs/architecture/platform.md`. Jira + Xray Server/DC and Cloud are offered; TestRail is in scope and
+  gated; Jira without Xray is in scope and not built; **Azure DevOps is never claimed** - a requirement that
+  assumes it is out of scope, not a design question. Machine access is deferred to MVP-1.0.1.
 - **Three independent state machines**: canonical review status, execution status, sync-job
   status. A requirement that implies one status field driving all three is a business-rule gap,
   not a detail to smooth over later.
