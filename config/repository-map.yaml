@@ -1,0 +1,34 @@
+# Machine-readable repository map for ASpectra.
+# Mirror of REPOSITORIES.md: change both in the same commit.
+# Only verified values. No secrets, no absolute paths, no release versions.
+# Verified from local Git remotes and repository files on 2026-10-20.
+schema: 1
+project: aspectra
+governance_repository:
+  name: ASpectra
+  url: https://github.com/<OWNER>/ASpectra   # TBD: not published yet
+  branch: main
+repositories:
+  - name: qa-platformCore
+    path: qa-platformCore
+    url: https://github.com/avenero/qa-platformCore
+    role: Deterministic test engine, step libraries and mobile agent
+    integration_branch: develop
+    default_branch: master
+  - name: qa-platformBE
+    path: qa-platformBE
+    url: https://github.com/avenero/qa-platformBE
+    role: Overlay backend, integrations, AI and the production deploy workflow
+    integration_branch: develop
+    default_branch: master
+    depends_on:
+      - name: qa-platformCore
+        via: Maven artifacts com.qa:*-core at coreVersion; tested commit pinned in core.ref
+      - name: qa-platformFE
+        via: deploy workflow builds the FE image at the commit pinned in fe.ref
+  - name: qa-platformFE
+    path: qa-platformFE
+    url: https://github.com/avenero/qa-platformFE
+    role: Single-page web console
+    integration_branch: develop
+    default_branch: master

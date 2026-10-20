@@ -1,0 +1,27 @@
+# ASpectra tracks only governance files.
+# See docs/architecture/decisions/0001-governance-repo-without-submodules.md.
+
+# Independent application repositories: own Git history, never tracked here
+/qa-platformFE/
+/qa-platformBE/
+/qa-platformCore/
+
+# Git worktrees of those repositories (workspace rule: <repo>.worktrees/)
+/*.worktrees/
+
+# Shared lock used by core-publisher
+/.core-publish.lock
+
+# Secrets and local environment
+.env
+.env.*
+!.env.example
+
+# Local-only agent settings
+.claude/settings.local.json
+CLAUDE.local.md
+
+# IDE and OS
+.idea/
+.vscode/
+.DS_Store

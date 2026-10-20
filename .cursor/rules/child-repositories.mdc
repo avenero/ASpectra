@@ -1,0 +1,9 @@
+---
+description: Boundary reminder for files inside the application repositories
+globs: qa-platformFE/**,qa-platformBE/**,qa-platformCore/**
+alwaysApply: false
+---
+- These files belong to an independent Git repository, not to ASpectra.
+- Read that repository's AGENTS.md first; it governs this code.
+- Commit inside that repository through its own git flow, never at the ASpectra root.
+- Cross-repository changes follow @docs/development/cross-repository-changes.md.

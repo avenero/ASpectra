@@ -1,0 +1,8 @@
+---
+description: ASpectra workspace entry rules
+alwaysApply: true
+---
+- Follow @AGENTS.md and @docs/architecture/repository-rules.md.
+- qa-platformFE, qa-platformBE and qa-platformCore are independent Git repositories with their own AGENTS.md.
+- Plan before changing files. Commits, pushes and deletions need explicit approval.
+- Do not copy rules into this file; link to the canonical document.
