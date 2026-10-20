@@ -15,7 +15,7 @@
 |---|---|
 | Owner | `avenero` — single owner (§0.1) |
 | Created | 2026-10-05 |
-| Supersedes | nothing yet — see §13 for the relationship to `requirements.md`, `.claude/CLAUDE.md` and `ORCHESTRATION.md` |
+| Supersedes | the 2026-10-01 `requirements.md` baseline, now re-derived from this document — see §13 |
 | Source material | the code in the three repositories (authoritative), the Figma file `p06HxSrh2afAdXopnk4Qvs`, `requirements.md` (a 2026-10-01 FE baseline, partly stale) |
 
 ---
@@ -43,34 +43,40 @@ Three conventions worth stating before you start:
 | Rule | Decision |
 |---|---|
 | Owner | Single owner. No second signature is required for an answer to count as decided. |
-| Standing vs. the other documents | **A companion, not an authority.** This document runs alongside `.claude/CLAUDE.md`, `ORCHESTRATION.md` and `requirements.md`; it does not outrank them as engineering guidance. |
+| Standing vs. the other documents | **The single source of truth for scope** (owner decision, 2026-10-20). `requirements.md` restates it as numbered requirements and loses any disagreement with it. Engineering guidance lives in the canonical rule documents of the ASpectra repository (`docs/development/engineering-rules.md` and its siblings); they point at this document instead of restating scope. |
 | This document vs. the code | **On a scope question, this document wins.** Code that contradicts it is a defect to remove or a finished feature to gate — not a fact to document. |
 | An unanswered question | **Out of general scope by default — but never by silence.** Every `OUT` carries a written reason. |
 | Permitted answer values | `IN` / `OUT` / `LATER-RELEASE` / `UNDECIDED`. `OUT` and `LATER-RELEASE` each require a one-line reason; `LATER-RELEASE` names the release. |
 | Audience | **Internal only** — team, development, engineering. Unflattering facts therefore stay written plainly; they are more useful that way. |
 | Per-answer metadata | Not required. No date or author per answer. |
-| Where this document lives | **A new internal repository, `qa-platformDocs`**, a sibling of the three checkouts at workspace root and named to the existing convention. |
+| Where this document lives | **The ASpectra governance repository** (`avenero/ASpectra`, private), at `docs/alcance.md`. |
 
-**The folder structure, settled.** `qa-platformDocs` is a private repository holding the workspace-level
-documents that are version-controlled by nobody today:
+**The folder structure, settled — revised by the owner on 2026-10-20.** The workspace root is itself the
+private governance repository **ASpectra**, holding the workspace-level documents, the cross-repository
+rules and the agent configuration:
 
 ```
-qa-platformDocs/
-  alcance.md            # this document - the scope source of truth
-  requirements.md       # the 2026-10-01 FE baseline, kept as historical reference (see 13)
-  docs/diagrams/        # the mermaid architecture views
+ASpectra/                      # governance repository, branch main
+  docs/alcance.md              # this document - the scope source of truth
+  docs/requirements.md         # numbered requirements derived from this document
+  docs/diagrams/               # the mermaid architecture views
+  docs/architecture/, docs/development/, docs/deployment/
+  .claude/, .cursor/, AGENTS.md
+  qa-platformFE/ qa-platformBE/ qa-platformCore/   # independent repositories, ignored by ASpectra
 ```
 
-Three properties make this the smallest answer that actually works. The **workspace root stays a
-non-repository**, so nothing about the existing layout changes and the three checkouts stay siblings.
-**No product repository gains a dependency on this file**, so repositories remain self-contained (G17) —
-putting a workspace-wide document inside `qa-platformBE` would have made Core and FE implicitly depend on
-it. And `.claude/` stays uncommitted everywhere, as it is today. The alternatives were rejected for
-concrete reasons: making the root a repository would nest three checkouts inside a fourth, and submodules
-would add machinery for a problem that is three text files.
+This replaces the earlier answer — a separate `qa-platformDocs` repository beside a workspace root that
+stayed a non-repository — for three reasons. The documents that needed versioning were not only these
+three files but the whole cross-repository rule set and the agent configuration, which already lived at the
+root. The concern about nesting three checkouts inside a fourth is answered by ignoring each of them by
+explicit path, so the root can never record their files or a gitlink. And **no product repository gains a
+dependency on this file**, so repositories remain self-contained (G17), which was the property the earlier
+answer protected. Submodules stay rejected. The decision and its alternatives are recorded in ASpectra
+`docs/architecture/decisions/0001-governance-repo-without-submodules.md`.
 
-**Creating the repository and moving the files is a task of its own** and is not done by this document. Until
-it happens, this file is unversioned and the drift risk it names about `requirements.md` applies to itself.
+**`.claude/` is versioned where it carries shared instructions.** ASpectra versions its own `.claude/`
+except local settings, and each application repository versions `.claude/CLAUDE.md` and
+`.claude/settings.json`; `settings.local.json` stays uncommitted everywhere (ADR 0002).
 
 ---
 
@@ -2551,9 +2557,9 @@ durable before two instances run, or federated and two-factor sign-in break (§3
 
 | Document | Status | Verdict |
 |---|---|---|
-| `requirements.md` | A 2026-10-01 FE screen baseline, edited since, **stale unevenly** | Its mechanical observations are ~85-90% reliable. Its **negative claims** ("no test exists", "no flow behind this button") and its **status claims** are ~30% reliable. **12 of its 14 requirements promoted to 1.0 have already shipped** — reusing it as-is would queue twelve items of phantom work. It never mentions three of the four ingestion paths. Keep its resolved product decisions; re-derive every status from code. |
-| `.claude/CLAUDE.md` | Declares itself the source of truth | Its "Release scope" section is where the answers from this document land (§13.1). It is stale on the product definition ("execution overlay", §1.1), on human approval as an enforced property (§1.3), and on integration scope — Xray Cloud is built and offered, TestRail is in scope, and the Azure DevOps value is removed (§4.4). |
-| `ORCHESTRATION.md` | Agent pipeline rules | Stale on the same three points, and contradicts `CLAUDE.md` on 1.0 integration scope. Must point at the scope section, not restate it. |
+| `requirements.md` | **Re-derived from this document on 2026-10-20** as numbered requirements by feature, module and screen | Follows this document and loses any disagreement with it. The 2026-10-01 FE baseline it replaced stays in ASpectra's Git history; its statuses were ~30% reliable and are not reused. |
+| `.claude/CLAUDE.md` | Claude Code workspace memory; imports the canonical rule documents since 2026-10-20 | No longer restates scope. The product summary and the scope-as-configuration table live in ASpectra `docs/architecture/platform.md`, aligned with §1.1-§1.4 and §4.4 on 2026-10-20. |
+| `ORCHESTRATION.md` | Claude Code adapter for the agent pipeline | Points at the canonical pipeline document and restates no scope, which removes the contradiction it carried. |
 | Figma `p06HxSrh2afAdXopnk4Qvs` | 38 frames across 6 sections | **More current than `requirements.md`** — three frames depict shipped behaviour the document still lists as missing. |
 
 > **Decision — every scope item is traceable, and drift is caught by configuration, not by reading.**
@@ -2566,26 +2572,24 @@ pipeline's verification step repeats until every criterion is proven.
 **No scope item exists without acceptance criteria.** An item without them cannot reach implementation at
 all: the implementation step requires them as one of its three inputs.
 
-**`requirements.md` is kept as a historical reference**, as §0.1's folder listing already records: its
-resolved product decisions stand, and every status in it is re-derived from code.
+**`requirements.md` is derived from this document**, requirement by requirement with the section each comes from; the earlier baseline is history in Git.
 
 **Drift is detected automatically, by binding the answers to real configuration.** §13.1 places the scope
-answers in `CLAUDE.md`'s Release scope as configuration values rather than prose, precisely so that the
+answers in the scope-as-configuration table of ASpectra `docs/architecture/platform.md` as configuration values rather than prose, precisely so that the
 document and the running system cannot drift — the same standard by which every guardrail has an automated
 guard.
 
 **This document carries no built/offered/proven matrix.** §13.1 gives that record to the Release scope,
 expressed as configuration values; a second copy here would be the next document to drift.
 
-**Reconciling `CLAUDE.md` and `ORCHESTRATION.md` is the task §1.4 queues** for when this scope is
-confirmed, and it requires the owner's explicit approval to edit either file (G36).
+**Reconciling `CLAUDE.md` and `ORCHESTRATION.md` was done on 2026-10-20** with the owner's approval: both now import or point at the canonical documents and restate no scope. The landing page correction of §1.4 remains open.
 
 ### 13.1 Where the answers land
 
-Once filled, the scope answers belong in **`.claude/CLAUDE.md`, section "Release scope"**, expressed
+The scope answers belong in **ASpectra `docs/architecture/platform.md`, table "Scope as configuration"**, expressed
 **in terms of the real configuration values** (`INTEGRATION_OFFERED_PROVIDERS`, `AI_ENABLED`, …) rather than
-prose — so the document and the running system cannot drift. `ORCHESTRATION.md` should then **point at**
-that section instead of repeating it, which is how the current contradiction arose.
+prose — so the document and the running system cannot drift. `.claude/CLAUDE.md` imports that document and
+`ORCHESTRATION.md` points at it instead of repeating it.
 
 ---
 
