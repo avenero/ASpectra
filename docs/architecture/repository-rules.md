@@ -6,16 +6,16 @@ These are the canonical cross-repository engineering rules for A·Spectra. Every
 instruction file links here instead of copying them
 ([R7](#r7-single-source-of-truth)).
 
-They extend, and never weaken, the rules already maintained in
-[../../.claude/CLAUDE.md](../../.claude/CLAUDE.md): working rules 1-18, "What the AI does, and
-never does", guardrails G1-G36, the shared workspace rules and the git flow. Those remain
-authoritative. Repository-specific rules live in each repository's `AGENTS.md`.
+They extend, and never weaken, the engineering rules in
+[../development/engineering-rules.md](../development/engineering-rules.md) (working rules 1-20, "What the
+AI does, and never does", gates, guardrails G1-G36) and the git rules in
+[../development/git-workflow.md](../development/git-workflow.md). Those remain authoritative. Repository-specific rules live in each repository's `AGENTS.md`.
 
 ## Precedence
 
 1. The user's explicit instruction in the current session.
 2. The owning repository's instructions, for files inside that repository.
-3. These rules and the shared rules in `.claude/CLAUDE.md`.
+3. These rules, the engineering rules and the git workflow.
 4. Tool-specific files (`AGENTS.md`, `.cursor/rules/*.mdc`, agent and skill definitions).
    They may narrow behaviour but never contradict levels 2-3.
 

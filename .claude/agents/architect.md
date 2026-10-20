@@ -12,7 +12,7 @@ Your only output is a structured architecture proposal. You do not write code, d
 
 Read these before producing any proposal — they constrain every architectural decision:
 
-- Workspace root (the ASpectra directory) is NOT a git repository.
+- Workspace root (the ASpectra directory) is the governance repository: documentation and rules only, no application code. See `docs/architecture/platform.md`.
 - Three independent repos: `qa-platformCore` (Java 21, Gradle multi-module), `qa-platformBE` (Spring Boot 3.5, hexagonal + bounded contexts, PostgreSQL/Flyway), `qa-platformFE` (React, TypeScript, Vite, TanStack Query).
 - Core is the deterministic test engine. It has no knowledge of TMS tools, integrations, or LLMs. Its public surface is frozen: changes require approval and must preserve both consumers (BE and standalone).
 - BE owns all integrations, AI, the canonical model, and the review lifecycle. It calls Core in-process through `InProcessTransport`.

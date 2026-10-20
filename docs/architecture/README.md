@@ -9,13 +9,14 @@ application lives in its own repository.
 | Document | Purpose |
 |---|---|
 | [repository-boundaries.md](repository-boundaries.md) | What ASpectra and each application repository own, and how they depend on each other |
+| [platform.md](platform.md) | Product, repositories, end-to-end flow, cross-repository mechanics, local stack |
 | [repository-rules.md](repository-rules.md) | Canonical cross-repository rules R1-R16 |
 | [decisions/](decisions/README.md) | Architecture decision records (ADRs) |
 | [../diagrams/](../diagrams/README.md) | Architecture diagrams (Unverified) |
 
 ## Where the product architecture is described today
 
-The product definition, end-to-end flow, cross-repository mechanics, working rules, AI
-limits and guardrails G1-G36 are currently maintained in [../../.claude/CLAUDE.md](../../.claude/CLAUDE.md).
-That file stays authoritative for them until a separately approved change moves them here.
-Their accuracy has not been re-verified (see [../README.md](../README.md#known-open-documentation-issues)).
+The product definition, repository layout, end-to-end flow and cross-repository mechanics are in
+[platform.md](platform.md). Product scope is defined in [../alcance.md](../alcance.md), which wins on any
+disagreement. Engineering rules, AI limits and guardrails G1-G36 are in
+[../development/engineering-rules.md](../development/engineering-rules.md).

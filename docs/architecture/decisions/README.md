@@ -10,7 +10,7 @@ that repository.
 | ADR | Title | Status |
 |---|---|---|
 | [0001](0001-governance-repo-without-submodules.md) | Governance repository with nested, ignored application repositories | Accepted |
-| [0002](0002-single-source-for-agent-instructions.md) | Single source for agent instructions | Accepted (partially implemented) |
+| [0002](0002-single-source-for-agent-instructions.md) | Single source for agent instructions | Accepted |
 
 ## Template
 

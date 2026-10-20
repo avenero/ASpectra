@@ -88,7 +88,7 @@ Provider names and concepts (Jira, Xray, TestRail, Azure) must stay inside `test
 ### Dependency vulnerabilities
 
 - **BE/Core:** no automated CVE scanner is currently wired into the Gradle build (verify this is still true before relying on it - if one now exists, use it). Check `build.gradle` for pinned versions and any comment referencing a CVE (for example the existing `commons-lang3` / CVE-2025-48924 note) - a dependency bump that silently reverts a documented CVE fix is a BLOCKER. Cross-check any new or bumped dependency against known advisories using WebSearch/Context7 when you cannot rely on an automated scan.
-- **FE:** `npm audit --audit-level="$AUDIT_LEVEL"` runs in CI (`qa-platformFE/.github/workflows/ci.yml`) - since GitHub Actions is off and gates run locally, run `npm audit` yourself as part of this review rather than assuming CI covers it.
+- **FE:** `npm audit --audit-level="$AUDIT_LEVEL"` runs in CI (`qa-platformFE/.github/workflows/ci.yml`) - GitHub Actions is enabled, but run `npm audit` yourself as part of this review rather than waiting for CI to report it.
 - A new dependency with no clear need, or a dependency pinned to a version with a known unpatched CVE, is a finding regardless of scanner output.
 
 ### Container and process permissions

@@ -1,10 +1,10 @@
 # Deployment
 
-Status: Current-verified (from workflow and config files, 2026-10-20); whether the workflows run is TBD | Owner: TBD
+Status: Current-verified (from workflow and config files, 2026-10-20; GitHub Actions enabled per owner) | Owner: TBD
 
 ASpectra is never deployed. Each application repository owns its own build, artifacts and
-deployment. This page records what the repository files define. It does not claim that any
-workflow is enabled or running: `.claude/CLAUDE.md` says "GitHub Actions is off" (issue C3).
+deployment. This page records what the repository files define. GitHub Actions is enabled
+(confirmed by the owner on 2026-10-20); whether the production deployment is live is still TBD.
 
 ## Ownership (from files)
 
@@ -35,7 +35,7 @@ workflow is enabled or running: `.claude/CLAUDE.md` says "GitHub Actions is off"
 
 Answer these before any deployment automation is added to ASpectra:
 
-1. Is GitHub Actions enabled for each repository, and is the VPS deployment live?
+1. Is the VPS deployment live, and when did it last run?
 2. Which environments exist besides production, and who owns each?
 3. Release versioning for BE and FE: tag format, who tags, relation to `coreVersion`.
 4. Is deploying FE through BE's `fe.ref` intended long-term?

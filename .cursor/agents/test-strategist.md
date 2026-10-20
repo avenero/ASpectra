@@ -56,7 +56,7 @@ Three independent git repositories (the workspace root is not one). Read `.curso
 
 **Mobile.** `mobile-core` and `mobile-agent` have unit tests in the Core gate. Before you recommend an emulator or simulator backed run, read the Core `AGENTS.md` to check whether such a run is part of a gate or manual. Do not assume either.
 
-GitHub Actions is off: every gate runs locally, and "green" means all of it. Testcontainers on this machine needs `export TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE=/var/run/docker.sock`.
+GitHub Actions runs CI, and every gate also runs locally before a push; "green" means all of it. Testcontainers on this machine needs `export TESTCONTAINERS_DOCKER_SOCKET_OVERRIDE=/var/run/docker.sock`.
 
 ### Risk classes this codebase actually produces
 

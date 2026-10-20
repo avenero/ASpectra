@@ -3,7 +3,8 @@
 Status: Intended | Owner: TBD
 
 Procedure for a change that touches more than one application repository. The git flow, worktree
-rules and Core publishing steps are defined in [.claude/CLAUDE.md](../../.claude/CLAUDE.md) and are
+rules and Core publishing steps are defined in [git-workflow.md](git-workflow.md) and
+[platform.md](../architecture/platform.md#cross-repository-mechanics) and are
 not repeated here.
 
 ## 1. Impact statement
@@ -27,7 +28,7 @@ One issue, branch and worktree per repository, each through its own git flow
 ## 3. Merge order
 
 Merge in dependency order. For Core changes consumed by BE, follow the Core publishing steps in
-`.claude/CLAUDE.md` before the BE merge, and update `coreVersion` and `core.ref` in BE.
+[platform.md](../architecture/platform.md#cross-repository-mechanics) before the BE merge, and update `coreVersion` and `core.ref` in BE.
 
 ## 4. Record
 
