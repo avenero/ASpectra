@@ -33,7 +33,7 @@ See [repository-rules.md](../architecture/repository-rules.md#precedence).
 | How to work, AI limits, working rules, gates, guardrails G1-G36 | [engineering-rules.md](engineering-rules.md) |
 | Worktrees, branch strategy, feature flow | [git-workflow.md](git-workflow.md) |
 | Agent pipeline and agent selection | [agent-pipeline.md](agent-pipeline.md) |
-| Agent definitions | [.claude/agents/](../../.claude/agents/) (`.cursor/agents/` is a drifted copy, issue C5) |
+| Agent definitions | [.claude/agents/](../../.claude/agents/) (`.cursor/agents/` holds one short adapter per agent) |
 | Repository URLs and roles | [REPOSITORIES.md](../../REPOSITORIES.md), mirrored in [config/repository-map.yaml](../../config/repository-map.yaml) |
 | Ownership and dependencies | [repository-boundaries.md](../architecture/repository-boundaries.md) |
 | Per-repository rules, build and test | Each repository's `AGENTS.md` and README |

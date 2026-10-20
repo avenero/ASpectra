@@ -7,7 +7,8 @@ holds only what is specific to Claude Code.
 ## Claude Code specifics
 
 - The ten subagents live flat in `.claude/agents/`; this folder is the canonical agent set. Cursor keeps a
-  counterpart in `.cursor/agents/`; a change to an agent's behavior belongs in both.
+  short adapter per agent in `.cursor/agents/` that points here and maps tool names; a change to an
+  agent's behavior is made only here.
 - Call a subagent with the `Agent` tool. Built-in tools: `Read`, `Grep`, `Glob`, `Bash`, `Edit`, `Write`,
   `NotebookEdit`, `WebFetch`, `WebSearch`, `TodoWrite`, `Agent`.
 - GitHub work uses the `gh` CLI through `Bash`; no GitHub MCP server is configured here.

@@ -20,7 +20,8 @@ and `.cursor/agents/`, and have also drifted.
   `docs/development/git-workflow.md` and `docs/development/agent-pipeline.md` (moved 2026-10-20).
 - `.claude/CLAUDE.md` stays in place as Claude Code's workspace memory and imports those documents with
   `@path`; `.claude/ORCHESTRATION.md` and `.cursor/agents/AGENTS.md` hold only tool-specific notes.
-- `.claude/agents/` is the canonical agent set; `.cursor/agents/` is its Cursor counterpart.
+- `.claude/agents/` is the canonical agent set. Each file in `.cursor/agents/` is a short adapter that keeps
+  Cursor's frontmatter (name, model, description, readonly), points to the canonical file and maps tool names.
 - ASpectra commits its own `.claude/` and `.cursor/` folders, except local settings. The rule in
   `.claude/CLAUDE.md` that `.claude/` is never committed applies to the three application
   repositories, not to ASpectra.
@@ -32,5 +33,4 @@ and `.cursor/agents/`, and have also drifted.
 ## Consequences
 - New files never copy a rule body.
 - Any rule change is made once, in the canonical document, with explicit approval (working rule 2).
-- The agent bodies in `.claude/agents/` and `.cursor/agents/` still differ in tool names and have drifted;
-  aligning them is open (issue C5).
+- Agent behavior changes in one place. The adapters change only when Cursor's tool names change.

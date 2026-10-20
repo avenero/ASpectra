@@ -19,8 +19,9 @@ Product scope is defined in [docs/alcance.md](../../docs/alcance.md).
 
 ## Cursor specifics
 
-- The ten subagents live in `.cursor/agents/`; their canonical versions are in `.claude/agents/`. A change to
-  an agent's behavior belongs in both.
+- Each of the ten files in `.cursor/agents/` is a short adapter: it points to its canonical definition in
+  `.claude/agents/` and maps Claude Code tool names to Cursor's. A change to an agent's behavior is made only
+  in `.claude/agents/`.
 - Call a subagent with the `Task` tool.
 - GitHub work may use the GitHub MCP; library documentation may use the Context7 MCP; browser checks may use
   the cursor-ide-browser MCP with `.cursor/skills/agent-browser/SKILL.md`.

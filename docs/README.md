@@ -44,12 +44,11 @@ Every document states one status on its second line
 
 ## Known open documentation issues
 
-Found during the 2026-10-20 audit and not yet resolved. C1-C4, C8, C9 and C11 were resolved on 2026-10-20 (shared rules moved to the canonical
+Found during the 2026-10-20 audit and not yet resolved. C1-C5, C8, C9 and C11 were resolved on 2026-10-20 (shared rules moved to the canonical
 documents; `alcance.md` §0.1 and §13 updated to the ASpectra layout).
 
 | ID | Issue | Location |
 |---|---|---|
-| C5 | Agent definitions are duplicated and have drifted | `.claude/agents/`, `.cursor/agents/` |
 | C6 | Child `AGENTS.md` files link to `../.cursor/AGENTS.md`, which does not exist. Fixed on branch `feature/workspace-instructions` in each repository, pending push and merge | each child repository |
 | C7 | Child `.claude/CLAUDE.md` is gitignored. Versioned on branch `feature/workspace-instructions` in each repository, pending push and merge | each child repository |
 | C10 | Diagrams were spot-checked on 2026-10-20 (stale references, counts, gates); a node-by-node re-verification of every diagram is still open | `diagrams/` |

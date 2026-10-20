@@ -179,7 +179,7 @@ merge steps belong to gitFlow so the rules are applied consistently.
 
 ### How to register a new subagent here
 
-When a new agent file is created in `.claude/agents/` (and its Cursor counterpart), add one row to the table above with:
+When a new agent file is created in `.claude/agents/` (plus its Cursor adapter in `.cursor/agents/`), add one row to the table above with:
 - **Agent**: the `name` field from the file's YAML frontmatter.
 - **File**: path relative to workspace root.
 - **When to invoke**: one sentence naming the trigger condition and which agent should call it.
