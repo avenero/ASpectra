@@ -1,5 +1,7 @@
 # State, errors, i18n, tests
 
+Status: Current-verified (code, 2026-10-03; spot-checked 2026-10-20) | Owner: TBD
+
 ```mermaid
 flowchart LR
     subgraph state["State"]
@@ -10,10 +12,10 @@ flowchart LR
         PROB["problem+json code"] --> MAP["overlayErrors.ts / assistant/lib/aiProblem.ts"] --> KEY["i18n key"] --> TOAST["toast"]
     end
     subgraph i18n["i18n - es / en / fr"]
-        K["~2,409 keys per locale"] --> CT["CompletenessTest:<br/>key sets equal, interpolation names equal,<br/>every used key exists"]
+        K["2,517 keys per locale (2026-10-20)"] --> CT["CompletenessTest:<br/>key sets equal, interpolation names equal,<br/>every used key exists"]
     end
     subgraph tests["Testing"]
-        V["~1,500 Vitest test blocks<br/>across 203 test files"]
+        V["~1,640 Vitest test blocks<br/>across 219 test files (2026-10-20)"]
         PW["Mocked Playwright (10 specs, 7 mocked)<br/>FAILS on any unmocked /api call (G13)"]
         RE["Real-stack E2E<br/>BE + 3 WireMock simulators + mobile agent"]
     end

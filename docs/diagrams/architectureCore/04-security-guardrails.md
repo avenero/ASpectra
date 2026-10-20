@@ -1,5 +1,7 @@
 # Security guardrails
 
+Status: Current-verified (code, 2026-10-03; spot-checked 2026-10-20) | Owner: TBD
+
 BE feeds Core two kinds of untrusted input: Gherkin step text/parameters (written by a QA, imported
 from a TMS, or possibly AI-suggested then human-approved) and destination URLs those steps act on.
 Core's job is to execute that input deterministically without ever becoming a vector for SSRF,

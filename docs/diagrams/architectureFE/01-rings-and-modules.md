@@ -1,5 +1,7 @@
 # Rings and modules
 
+Status: Current-verified (code, 2026-10-03; spot-checked 2026-10-20) | Owner: TBD
+
 ## Four rings, enforced by lint
 
 `eslint-plugin-boundaries` runs with `default: 'disallow'` — an import is illegal unless a rule permits

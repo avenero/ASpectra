@@ -1,5 +1,7 @@
 # The intelligence capability — macro view
 
+Status: Current-verified (code, 2026-10-03; spot-checked 2026-10-20) | Owner: TBD
+
 The `intelligence` capability is **implemented, current code** — governed and off by default
 (`AI_ENABLED=false`), never "proposed." This is the general-reader placement across the three
 repositories; the deep internals (pipeline, governance, provider adapters, job design) live in
@@ -77,3 +79,13 @@ flowchart TB
 `report.summarize`, `env.hints.extract`, `import.duplicates.detect`, `macro.draft`, `macro.name`,
 `spec.scenarios.draft`, `failure.triage`, `connector.fieldmap.propose`); none currently runs at a `DEEP`
 tier. See the BE folder for the per-capability tier/grounding/check table.
+
+## Scope decided for these capabilities
+
+From [alcance.md](../../alcance.md) §8 (requirements AI-01..AI-09): AI stays off by default permanently and
+every capability keeps its deterministic fallback. Nine capabilities are in scope; `failure.triage` and
+`connector.fieldmap.propose` are experiment-only, opt-in and advisory, and are not sold until each passes
+its own evaluation (G31). The per-project egress posture shown above is decided to become an organisation
+setting changed only by the organisation administrator (ORG-12). Generation from specifications is shown
+only where AI is enabled; with AI off, Swagger/OpenAPI and Postman imports use deterministic extraction
+(IMB-03, IMB-04).

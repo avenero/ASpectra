@@ -1,5 +1,7 @@
 # The overlay bounded context — `testcase`
 
+Status: Current-verified (code, 2026-10-03; spot-checked 2026-10-20) | Owner: TBD
+
 ```mermaid
 flowchart TB
     subgraph api["testcase/api"]
@@ -29,7 +31,7 @@ flowchart TB
     subgraph infra["testcase/infrastructure"]
         I1["connector/jira - JiraXrayServerConnectorAdapter"]
         I2["connector/xraycloud - XrayCloudConnectorAdapter"]
-        I3["connector/testrail - TestRailConnectorAdapter<br/>built, hidden from 1.0 picker (FE allowlist)"]
+        I3["connector/testrail - TestRailConnectorAdapter<br/>built, gated (offered-providers + FE allowlist)"]
         I4["persistence / projection / sync / retention"]
         I5["acl/ six Intelligence*Adapter classes<br/>(Normalization, StepMapping, DuplicateDetection,<br/>FieldMapping, ReviewExplanation, Proposal)"]
         I6["acl/ CatalogStepCatalogAdapter, ProjectPermission..."]
@@ -47,7 +49,7 @@ unmapped — the deterministic matcher's own mappings are never overwritten, wha
 
 TestRail's connector adapter (`TestRailConnectorAdapter`, `PROVIDER_TYPE="TESTRAIL"`,
 `CONNECTOR_ID="testrail"`) is a `TestManagementConnectorPort` Spring bean, auto-discovered by
-`ConnectorRegistry` exactly like Jira and Xray Cloud — there is no special-case wiring to bypass it. The
-only gate withholding it from a new project is an FE-side allowlist (see
-[../architectureFE/01-rings-and-modules.md](../architectureFE/01-rings-and-modules.md)), not a missing
-backend implementation.
+`ConnectorRegistry` exactly like Jira and Xray Cloud — there is no special-case wiring to bypass it. It is
+withheld by the backend allowlist `integration.offered-providers` and by the FE allowlist (see
+[../architectureFE/01-rings-and-modules.md](../architectureFE/01-rings-and-modules.md)), not by a missing
+implementation (requirement INT-03).

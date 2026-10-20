@@ -1,5 +1,7 @@
 # Bounded contexts
 
+Status: Current-verified (code, 2026-10-03; spot-checked 2026-10-20) | Owner: TBD
+
 ```mermaid
 flowchart TB
     subgraph BCs["Bounded contexts - api / application / domain / infrastructure"]
@@ -9,7 +11,7 @@ flowchart TB
         EXEC["execution<br/>launch, runner, transports,<br/>artifacts, outbox, WebSocket"]
         CAT["catalog<br/>step catalog, macros, step i18n"]
         TC["testcase<br/>THE OVERLAY"]
-        IMP["imports<br/>legacy Swagger/Postman/user story"]
+        IMP["imports<br/>Swagger/Postman/user story drafts<br/>converges on testcase (IMB-01)"]
         DASH["dashboard"]
         HEALTH["health"]
         INT["intelligence<br/>all AI, governed, off by default"]
@@ -50,20 +52,20 @@ Broader than a single BC — confirmed by a workspace-wide import grep:
 Each port is one per capability (`AiNormalizationPort`, `AiStepMappingPort`, `AiDuplicateDetectionPort`,
 `AiFieldMappingPort`, `AiReviewExplanationPort`, `AiProposalPort`), not one shared `TestCaseAiPort`.
 
-## Current, real coupling issues (2026-09-22 step audit, still relevant)
+## Coupling issues from the 2026-09-22 step audit
 
-- `ScenarioSuggestionEngine` hardcodes Core step ids, including one Spanish id and one deprecated
-  component id — a hardcoded id is a contract with Core that no test proves; when Core renames or
-  deletes it, the suggestion silently stops matching.
-- `GherkinStepRenderer` keys docstring rendering off hardcoded Spanish pattern text plus two regexes —
-  pattern text is display data, not identity, and this coupling should key off the step id or a catalog
-  flag instead.
-- Eleven test classes and five WireMock fixtures embed Spanish step patterns, which will fail as a group
-  if Core ever deletes that vocabulary.
+Re-checked against the code on 2026-10-20:
 
-## Scale note (as of 2026-10-03)
+- **Resolved:** `ScenarioSuggestionEngine`, which hardcoded Core step ids (one Spanish, one deprecated), was
+  replaced by `SpecDraftService` (`imports/application`), which grounds every draft on the live catalog
+  through the `CATALOG_STEP_EXISTS` check.
+- **Resolved:** `GherkinStepRenderer` (`project/domain/service`) no longer keys docstring rendering off
+  Spanish pattern text; it uses the catalog flag `lastParameterIsDocString`.
+- **Still open:** three test files under `src/test` embed Spanish step patterns as string literals and
+  would fail together if Core removed that vocabulary.
 
-The backend's migration history has moved well past the historical "V1-V98" figure once cited for this
-repository — the AI-specific migrations alone span V102-V107. Regenerate any specific migration-range
-claim from `qa-platformBE/src/main/resources/db/migration/` before publishing it; cite the mechanism
-(Flyway, forward-only `V*` + `U*` undo) rather than a frozen number.
+## Scale note (as of 2026-10-20)
+
+About 70,100 lines of main Java source. 102 forward migrations, the latest `V125`. Regenerate any figure
+from `qa-platformBE/src/main/resources/db/migration/` before quoting it, and cite the mechanism (Flyway,
+forward-only `V*` with a `U*` undo) rather than a frozen number.

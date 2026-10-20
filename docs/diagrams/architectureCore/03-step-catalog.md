@@ -1,5 +1,7 @@
 # The step catalog
 
+Status: Current-verified (code, 2026-10-03; spot-checked 2026-10-20) | Owner: TBD
+
 ## The three id namespaces
 
 1. **`@StepId`** — on a `StepComponent`-implementing class — the component id, e.g.

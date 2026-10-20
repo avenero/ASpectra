@@ -1,5 +1,7 @@
 # The launch pipeline and durable jobs
 
+Status: Current-verified (code, 2026-10-03; spot-checked 2026-10-20) | Owner: TBD
+
 ## The launch pipeline — one path for every run
 
 ```mermaid

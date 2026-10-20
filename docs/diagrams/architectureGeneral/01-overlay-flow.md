@@ -1,9 +1,13 @@
-# The overlay loop
+# The connector door: the overlay loop
 
-Scope: the whole solution, current state. The customer's test management system (TMS) stays the
-source of truth. The platform imports selected cases, normalizes them, requires human approval,
-executes deterministically, stores evidence, and writes results back into the container the cases
-came from.
+Status: Current-verified (code, 2026-10-20) | Owner: TBD
+
+Scope: the test-management connector door, end to end, current state. It is one of several entry doors
+(see [00-entry-doors-and-runtime.md](00-entry-doors-and-runtime.md)) and the only one that writes results
+back. For the cases that came from it, the customer's test management system (TMS) is the source of truth.
+The platform imports selected cases, normalizes them, walks them through review in the console (a
+convention of the flow, not a backend invariant: alcance §1.3), executes deterministically, stores
+evidence, and writes results back into the container the cases came from.
 
 ```mermaid
 flowchart TB
@@ -56,10 +60,10 @@ that BC boundary through its published service, not an ACL re-implementation, si
 same backend.
 
 TestRail's connector (`TestRailConnectorAdapter`) and FE descriptor are fully built and auto-discovered
-by `ConnectorRegistry` exactly like Jira/Xray. It is withheld from the project-creation picker by a
-single FE allowlist (`OFFERED_CONNECTOR_PROVIDERS` in `connectorProviders.ts`) pending its own validated
-release (ticket TR4) — a product gate, not a missing implementation. A project already configured with
-it keeps working.
+by `ConnectorRegistry` exactly like Jira/Xray. Three gates withhold it (alcance §4.4, requirement
+INT-03): the backend allowlist `integration.offered-providers` (default `JIRA_XRAY,JIRA_XRAY_CLOUD`), the
+FE allowlist `OFFERED_CONNECTOR_PROVIDERS` in `connectorProviders.ts`, and the landing copy. It is a
+product gate, not a missing implementation.
 
 ## Stage ownership
 
@@ -76,7 +80,7 @@ it keeps working.
 
 Stage 4 has no FE screen of its own, by design: it is folded into the environment-and-runtime-config
 step every "Run"/"Execute" action collects immediately before launch (confirmed 2026-10-01, see
-workspace `.claude/CLAUDE.md`).
+[platform.md](../../architecture/platform.md)).
 
 ## How each stage hands off to the next
 
@@ -133,7 +137,8 @@ terminal result.
 
 ## Three independent state machines
 
-Never folded into one another (workspace `.claude/CLAUDE.md` working rule 4).
+Never folded into one another (working rule 7 in
+[engineering-rules.md](../../development/engineering-rules.md)).
 
 ```mermaid
 flowchart LR

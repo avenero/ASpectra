@@ -1,20 +1,22 @@
 # Architecture diagrams
 
-Verified, code-grounded architecture of A·Spectra: the execution-overlay product spanning
-`qa-platformCore`, `qa-platformBE` and `qa-platformFE`. Every diagram node in these folders is traceable
-to a real file — nothing here is proposed or aspirational, and the former "proposed AI architecture"
-document has been folded in as current, implemented architecture (see below). Renders directly in
-GitHub, GitLab, VS Code and IntelliJ.
+Status: Current-verified (code) for diagrams of today's state; Intended where a section says so | Owner: TBD
 
-There is no `architecture.md` companion document anywhere in this workspace — any earlier reference to
-one was a dead link and has been removed. The source of truth for anything not shown in a diagram is the
-relevant repository's own `.claude/CLAUDE.md`, plus the workspace root `.claude/CLAUDE.md`.
+Code-grounded architecture of A·Spectra across `qa-platformCore`, `qa-platformBE` and `qa-platformFE`.
+Diagrams of today's state trace every node to a real file. Diagrams of the target state are labelled
+Intended and come only from [alcance.md](../alcance.md), the single source of truth for scope, with
+requirement IDs from [requirements.md](../requirements.md). Renders in GitHub, GitLab, VS Code and
+IntelliJ.
+
+Shared facts not drawn here live in [platform.md](../architecture/platform.md) and
+[engineering-rules.md](../development/engineering-rules.md); each repository's own rules are in its
+`AGENTS.md` and `.claude/CLAUDE.md`.
 
 ## How this is organized
 
 | Folder | Scope |
 |---|---|
-| [architectureGeneral/](architectureGeneral/README.md) | The whole solution at macro level: the 8-stage overlay loop, critical example flows (Jira/Xray, Postman, Swagger/OpenAPI, user-story imports, an AI-assisted review path, a mobile run), and where the `intelligence` capability sits across repos |
+| [architectureGeneral/](architectureGeneral/README.md) | The whole solution at macro level: the entry doors and target runtime, the 8-stage connector loop, critical example flows (Jira/Xray, Postman, Swagger/OpenAPI, user-story imports, an AI-assisted review path, a mobile run), and where the `intelligence` capability sits across repos |
 | [architectureCore/](architectureCore/README.md) | `qa-platformCore` internals: modules, the plugin-host runtime, transports, the step catalog, and the guardrails that keep AI out |
 | [architectureBE/](architectureBE/README.md) | `qa-platformBE` internals: bounded contexts, the overlay BC, the launch pipeline and durable-job patterns, result sync, the `intelligence` bounded context, cross-cutting concerns |
 | [architectureFE/](architectureFE/README.md) | `qa-platformFE` internals: the four lint-enforced rings, the overlay feature, state/errors/i18n/tests, the `assistant` feature |
@@ -22,7 +24,18 @@ relevant repository's own `.claude/CLAUDE.md`, plus the workspace root `.claude/
 Start with `architectureGeneral/` for the product-level picture, then open the folder for the repository
 you need to go deeper on.
 
-## What changed in this rewrite (2026-10-03)
+## What changed on 2026-10-20
+
+- New [architectureGeneral/00-entry-doors-and-runtime.md](architectureGeneral/00-entry-doors-and-runtime.md):
+  the five entry doors, two stored models and three launch paths as they exist today, mapped against the
+  decided scope, plus the target runtime with the customer-side runner.
+- The connector loop is presented as one door among several, and review as a convention of the console
+  flow (alcance §1.2, §1.3).
+- Each repository folder gains a "Decided changes" table linking the architecture to requirement IDs.
+- Corrected facts: TestRail is gated in the backend as well as the FE; the inbound rate limiter is per
+  instance; the two step-audit couplings in BE are resolved; file, line, key and test counts refreshed.
+
+## Earlier rewrite (2026-10-03)
 
 This folder previously held five flat files (`01-general-architecture.md` through
 `05-proposed-ai-architecture.md`). They have been replaced by the four folders above, each holding

@@ -1,5 +1,7 @@
 # Modules and the plugin-host runtime
 
+Status: Current-verified (code, 2026-10-03; spot-checked 2026-10-20) | Owner: TBD
+
 ## Modules
 
 6 Gradle subprojects (`qa-platformCore/settings.gradle`): `common`, `http-core`, `web-core`,

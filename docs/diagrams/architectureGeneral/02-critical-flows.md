@@ -1,5 +1,7 @@
 # Critical flows
 
+Status: Current-verified (code, 2026-10-03; spot-checked 2026-10-20) | Owner: TBD
+
 One grounded flow per import source, plus the AI-assisted review path and a mobile execution run.
 Each lists the real hop chain, what is durable versus synchronous, and where the human approval gate
 sits.
@@ -102,3 +104,16 @@ backend restart mid-run loses the SSE subscription (a documented, accepted limit
 lossless is a separate, not-yet-scheduled decision). Human gate: none mid-run — deterministic execution
 needs no approval; the human gate for this layer sits earlier, at canonical review/approval, same as
 every other layer.
+
+## Decided changes to these flows
+
+From [alcance.md](../../alcance.md) §4.6 and §4.14:
+
+- Flows (b), (c) and (d) end in the separate `imports` draft model today. The decided target is that they
+  terminate in the canonical model, and that accepting a draft promotes it to a canonical scenario
+  (IMB-01, IMB-02). With AI off, (b) and (c) extract request steps with their documented status-code and
+  schema assertions deterministically instead of producing empty drafts (IMB-03, IMB-04).
+- Flow (a) is the only flow that writes back. The decided target extends write-back to suite and feature
+  runs of connector cases and reports every skipped case before the run (SYN-03, SYN-08).
+
+See [00-entry-doors-and-runtime.md](00-entry-doors-and-runtime.md) for the whole picture.

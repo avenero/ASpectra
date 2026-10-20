@@ -26,7 +26,7 @@ Every document states one status on its second line
 | [../AGENTS.md](../AGENTS.md) | Agent entry point | TBD | Intended |
 | [alcance.md](alcance.md) | Product scope definition: **the only source of truth for scope** | avenero | Canonical (§4.12 onward awaits owner confirmation) |
 | [requirements.md](requirements.md) | Requirements by feature, module and screen, derived from `alcance.md` | avenero | Intended |
-| [diagrams/](diagrams/README.md) | Architecture diagrams (General, BE, Core, FE) | TBD | Unverified |
+| [diagrams/](diagrams/README.md) | Architecture diagrams (General, BE, Core, FE), today's state and decided target | TBD | Current-verified (spot-checked 2026-10-20) |
 | [architecture/README.md](architecture/README.md) | Architecture index | TBD | Intended |
 | [architecture/platform.md](architecture/platform.md) | Product, repositories, flow, cross-repository mechanics | TBD | Intended |
 | [architecture/repository-boundaries.md](architecture/repository-boundaries.md) | Ownership and dependencies | TBD | Current-verified (from files) |
@@ -52,5 +52,5 @@ shared rules moved to the canonical documents.
 | C5 | Agent definitions are duplicated and have drifted | `.claude/agents/`, `.cursor/agents/` |
 | C6 | Child `AGENTS.md` files link to `../.cursor/AGENTS.md`, which does not exist. Fixed on branch `feature/workspace-instructions` in each repository, pending push and merge | each child repository |
 | C7 | Child `.claude/CLAUDE.md` is gitignored. Versioned on branch `feature/workspace-instructions` in each repository, pending push and merge | each child repository |
-| C10 | Diagrams not validated against the code | `diagrams/` |
+| C10 | Diagrams were spot-checked on 2026-10-20 (stale references, counts, gates); a node-by-node re-verification of every diagram is still open | `diagrams/` |
 | C11 | `alcance.md` §0.1 and §13 still describe a separate `qa-platformDocs` repository, a non-repository workspace root and `.claude/` uncommitted everywhere; superseded by the owner's 2026-10-20 decisions (ADR 0001, ADR 0002). Needs an owner edit of `alcance.md` | `alcance.md` |

@@ -1,5 +1,7 @@
 # Transports and execution internals
 
+Status: Current-verified (code, 2026-10-03; spot-checked 2026-10-20) | Owner: TBD
+
 ## Per-run execution internals
 
 `ExecutionContext` is a facade over four collaborators, held as final fields:

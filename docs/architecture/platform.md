@@ -48,9 +48,9 @@ built or deployed ([ADR 0001](decisions/0001-governance-repo-without-submodules.
 
 | Repository | What it is | Stack |
 |---|---|---|
-| `qa-platformCore` | The deterministic test engine. Cucumber runtime, step libraries for HTTP, Web (Playwright), Mobile (Appium) and Database (JDBC), evidence and reporting. No knowledge of TMS tools or LLMs. Consumed both as Maven artifacts by BE and standalone. | Java 21, Gradle multi-module, ~53,800 lines main source, 6 modules |
-| `qa-platformBE` | The overlay backend. Connectors, canonical model, review lifecycle, execution launch, evidence, result sync. Owns every integration and all AI. | Spring Boot 3.5, Java 21, hexagonal + bounded contexts, PostgreSQL/Flyway, ~51,700 lines main source |
-| `qa-platformFE` | The single-page console. Integrations settings and the execution overlay. | React + TypeScript + Vite + TanStack Query + i18next + Tailwind, ~48,000 lines under `src/` |
+| `qa-platformCore` | The deterministic test engine. Cucumber runtime, step libraries for HTTP, Web (Playwright), Mobile (Appium) and Database (JDBC), evidence and reporting. No knowledge of TMS tools or LLMs. Consumed both as Maven artifacts by BE and standalone. | Java 21, Gradle multi-module, 6 modules, ~59,200 lines main source (2026-10-20) |
+| `qa-platformBE` | The overlay backend. Connectors, canonical model, review lifecycle, execution launch, evidence, result sync. Owns every integration and all AI. | Spring Boot 3.5, Java 21, hexagonal + bounded contexts, PostgreSQL/Flyway, ~70,100 lines main source (2026-10-20) |
+| `qa-platformFE` | The single-page console. Integrations settings and the execution overlay. | React + TypeScript + Vite + TanStack Query + i18next + Tailwind, ~43,200 lines of TypeScript under `src/` excluding tests (2026-10-20) |
 
 Each repository is self-contained (guardrail G17): its own `.github/workflows/`, scripts, Docker context and env template.
 

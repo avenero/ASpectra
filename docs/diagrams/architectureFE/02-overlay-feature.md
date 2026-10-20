@@ -1,8 +1,12 @@
 # The overlay feature — page, VM, components
 
-The overlay feature has grown well past earlier documented numbers: **46 files, 4,983 LOC** under
-`src/features/overlay/` (previously recorded as 24 files / 2,575 LOC) — flagged explicitly here as
-real growth, not a silent correction.
+Status: Current-verified (code, 2026-10-03; spot-checked 2026-10-20) | Owner: TBD
+
+Size on 2026-10-20: **47 files, about 5,100 lines** under `src/features/overlay/` (18 components, 13
+hooks, 12 lib files). Regenerate before quoting.
+
+Scope note (alcance §5.1, SCR-01): the overlay's six internal panels are designed in Figma as a single
+frame; designing them is decided work.
 
 ```mermaid
 flowchart TB
