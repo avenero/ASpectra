@@ -28,7 +28,7 @@ Change both in the same commit.
 | Role | Deterministic test engine: Cucumber runtime, step libraries (HTTP, Web, Mobile, Database), evidence and reporting, mobile agent |
 | Integration branch | `develop` |
 | Default branch (origin/HEAD) | `master` |
-| Its own instructions | `AGENTS.md` (tracked), `.claude/CLAUDE.md` (local, untracked) |
+| Its own instructions | `AGENTS.md` and `.claude/CLAUDE.md`, both versioned once branch `feature/workspace-instructions` is merged |
 
 ## qa-platformBE
 
@@ -39,7 +39,7 @@ Change both in the same commit.
 | Role | Overlay backend: connectors, canonical model, review lifecycle, execution launch, evidence, result sync, all AI |
 | Integration branch | `develop` |
 | Default branch (origin/HEAD) | `master` |
-| Its own instructions | `AGENTS.md` (tracked), `.claude/CLAUDE.md` (local, untracked) |
+| Its own instructions | `AGENTS.md` and `.claude/CLAUDE.md`, both versioned once branch `feature/workspace-instructions` is merged |
 
 ## qa-platformFE
 
@@ -50,7 +50,7 @@ Change both in the same commit.
 | Role | Single-page web console: integrations settings and the execution overlay |
 | Integration branch | `develop` |
 | Default branch (origin/HEAD) | `master` |
-| Its own instructions | `AGENTS.md` (tracked), `.claude/CLAUDE.md` (local, untracked) |
+| Its own instructions | `AGENTS.md` and `.claude/CLAUDE.md`, both versioned once branch `feature/workspace-instructions` is merged |
 
 ## Coordination
 
