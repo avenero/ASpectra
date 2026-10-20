@@ -11,6 +11,11 @@ the shared [platform.md](../../architecture/platform.md).
 LOC and catalog-entry counts drift between sessions — every number below is dated. Regenerate with
 `wc -l` / `COMPONENTS.md` / `cli-smoke.sh` before quoting a figure externally.
 
+![qa-platformCore — deterministic engine architecture](qa-platformCore.svg)
+
+The diagram above ([qa-platformCore.svg](qa-platformCore.svg)) is the one-page view of this repository; the files below go
+deeper on each part.
+
 | File | Scope |
 |---|---|
 | [01-modules-and-runtime.md](01-modules-and-runtime.md) | The 6 modules and the plugin-host runtime, from `ServiceLoader` discovery to the stateless engine |

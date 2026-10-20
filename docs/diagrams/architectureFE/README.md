@@ -8,6 +8,11 @@ Status: Current-verified (code, 2026-10-03; counts refreshed 2026-10-20) | Owner
 Anything not shown here: the code, `qa-platformFE/AGENTS.md` and `qa-platformFE/.claude/CLAUDE.md`, and the
 shared [platform.md](../../architecture/platform.md). Counts drift; regenerate before quoting one.
 
+![qa-platformFE — web console architecture](qa-platformFE.svg)
+
+The diagram above ([qa-platformFE.svg](qa-platformFE.svg)) is the one-page view of this repository; the files below go
+deeper on each part.
+
 | File | Scope |
 |---|---|
 | [01-rings-and-modules.md](01-rings-and-modules.md) | The four lint-enforced rings, the 12 feature modules and their declared cross-imports |

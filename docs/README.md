@@ -26,7 +26,7 @@ Every document states one status on its second line
 | [../AGENTS.md](../AGENTS.md) | Agent entry point | TBD | Intended |
 | [alcance.md](alcance.md) | Product scope definition: **the only source of truth for scope** | avenero | Canonical (§4.12 onward awaits owner confirmation) |
 | [requirements.md](requirements.md) | Requirements by feature, module and screen, derived from `alcance.md` | avenero | Intended |
-| [diagrams/](diagrams/README.md) | Architecture diagrams (General, BE, Core, FE), today's state and decided target | TBD | Current-verified (spot-checked 2026-10-20) |
+| [diagrams/](diagrams/README.md) | Architecture design diagrams (platform, BE, Core, FE) and detailed views, today's state and decided target | TBD | Current-verified (2026-10-20) |
 | [architecture/README.md](architecture/README.md) | Architecture index | TBD | Intended |
 | [architecture/platform.md](architecture/platform.md) | Product, repositories, flow, cross-repository mechanics | TBD | Intended |
 | [architecture/repository-boundaries.md](architecture/repository-boundaries.md) | Ownership and dependencies | TBD | Current-verified (from files) |
@@ -44,11 +44,10 @@ Every document states one status on its second line
 
 ## Known open documentation issues
 
-Found during the 2026-10-20 audit and not yet resolved. C1-C5, C8, C9 and C11 were resolved on 2026-10-20 (shared rules moved to the canonical
+Found during the 2026-10-20 audit and not yet resolved. C1-C5 and C8-C11 were resolved on 2026-10-20 (shared rules moved to the canonical
 documents; `alcance.md` §0.1 and §13 updated to the ASpectra layout).
 
 | ID | Issue | Location |
 |---|---|---|
-| C6 | Child `AGENTS.md` files link to `../.cursor/AGENTS.md`, which does not exist. Fixed on branch `feature/workspace-instructions` in each repository, pending push and merge | each child repository |
-| C7 | Child `.claude/CLAUDE.md` is gitignored. Versioned on branch `feature/workspace-instructions` in each repository, pending push and merge | each child repository |
-| C10 | Diagrams were spot-checked on 2026-10-20 (stale references, counts, gates); a node-by-node re-verification of every diagram is still open | `diagrams/` |
+| C6 | Child `AGENTS.md` files link to `../.cursor/AGENTS.md`, which does not exist. Fixed on branch `feature/workspace-instructions` in each repository (pushed), pending merge into develop | each child repository |
+| C7 | Child `.claude/CLAUDE.md` is gitignored. Versioned on branch `feature/workspace-instructions` in each repository (pushed), pending merge into develop | each child repository |

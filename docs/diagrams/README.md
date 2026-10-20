@@ -12,6 +12,21 @@ Shared facts not drawn here live in [platform.md](../architecture/platform.md) a
 [engineering-rules.md](../development/engineering-rules.md); each repository's own rules are in its
 `AGENTS.md` and `.claude/CLAUDE.md`.
 
+## Architecture design diagrams
+
+Four designed diagrams, verified against the code on 2026-10-20. Solid shapes are today's state; dashed
+pink shapes are decided in [alcance.md](../alcance.md) and not built. Each repository folder explains its
+diagram in its README.
+
+| Diagram | Shows |
+|---|---|
+| [aspectra-platform.svg](aspectra-platform.svg) | The whole solution: people, the deployment (Caddy, FE, BE, embedded Core, PostgreSQL, evidence, email, monitoring), external systems, the customer network with the mobile agent, and delivery from GitHub to the VPS |
+| [architectureBE/qa-platformBE.svg](architectureBE/qa-platformBE.svg) | Inbound adapters, the ten bounded contexts, outbound adapters, shared kernel, legacy layer, build guards and the five durable pipelines |
+| [architectureCore/qa-platformCore.svg](architectureCore/qa-platformCore.svg) | Consumers, the `common` contract and runtime, the protocol plugins and mobile agent, the step catalog, guardrails and the build and release chain |
+| [architectureFE/qa-platformFE.svg](architectureFE/qa-platformFE.svg) | The application shell, the twelve feature modules, the shared ring, data flow over REST and STOMP, lint boundaries, tests and delivery |
+
+![A·Spectra platform — solution architecture](aspectra-platform.svg)
+
 ## How this is organized
 
 | Folder | Scope |

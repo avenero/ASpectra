@@ -1,0 +1,277 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2100" height="1400" viewBox="0 0 2100 1400" role="img" aria-label="qa-platformFE — web console architecture" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTpjOGQ4MmM0OC00NzI3LTQ5M2EtOTIxNi05NWVhMjZmODJhOGYAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaARtM/SvzMBReLgWkwJpeEMAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDplYWQ1MTgzNi1iZjJiLTQ3YjUtOWRlMC0yMDE1MjU0NGUwZmZscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoUtqopcZ94P5wa3dbjoVpwgAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFgg3SRKG/4eq4kE57Uj8XLa9krWpzcUET7j8Crn5ZyaP9ekZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaJgEON3GtNzIevVTTClkTIYAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCDlsMPzaWe2HFwu8upgyFS/B3rbLwyRDl90SmgqKnmZrmRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBjdZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmM4ZDgyYzQ4LTQ3MjctNDkzYS05MjE2LTk1ZWEyNmY4MmE4Zi9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjQzMzc5MjNhLTAyMjQtNGI2MS05NjQ4LTZmMzg0ZDdmZWZhOXJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCDdJEob/h6riQTntSPxctr2StanNxQRPuPwKuflnJo/16JjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggLeNw7TY1d98s9CBn69AQ/wNw/UTtOLCQ0pD43SfQnfOiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggVEdWZszgatM+vxbwjG9mYZj4EvA94HsIb5v22iUVGDV0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQOxCPiifTgi+77NbzJduaH8r+0kD8Mo19krSWdn28fG1YP+cxZIE94CX1hbZMZD4m7lYBijRhgpGtLBm149b9OM=</c2pa:manifest></metadata>
+<title>qa-platformFE — web console architecture</title>
+<defs><marker id="a-fe" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1D4ED8"/></marker><marker id="a-fe-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1D4ED8"/></marker><marker id="a-be" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0F766E"/></marker><marker id="a-be-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0F766E"/></marker><marker id="a-core" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6D28D9"/></marker><marker id="a-core-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#6D28D9"/></marker><marker id="a-data" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#334155"/></marker><marker id="a-data-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#334155"/></marker><marker id="a-ext" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker><marker id="a-ext-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#B45309"/></marker><marker id="a-ops" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#475569"/></marker><marker id="a-ops-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#475569"/></marker><marker id="a-plan" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#BE185D"/></marker><marker id="a-plan-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#BE185D"/></marker><marker id="a-gov" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker><marker id="a-gov-s" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#374151"/></marker><filter id="sh" x="-5%" y="-5%" width="110%" height="120%"><feDropShadow dx="0" dy="1.5" stdDeviation="2" flood-color="#0F172A" flood-opacity="0.08"/></filter><linearGradient id="hdr" x1="0" x2="1"><stop offset="0" stop-color="#0F172A"/><stop offset="1" stop-color="#1E293B"/></linearGradient></defs>
+<rect width="2100" height="1400" fill="#F8FAFC"/>
+<rect width="2100" height="84" fill="url(#hdr)"/>
+<rect x="36" y="170" width="2028" height="200" rx="18" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.6"/>
+<rect x="54" y="158" width="432.64" height="24" rx="12" fill="#1D4ED8"/>
+<text x="270.32" y="174" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Application shell — the rings that may import every feature</text>
+<rect x="36" y="420" width="2028" height="452" rx="18" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1.6"/>
+<rect x="54" y="408" width="537.04" height="24" rx="12" fill="#1D4ED8"/>
+<text x="322.52" y="424" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">features — 12 modules, each api / components / hooks / lib / pages / types</text>
+<text x="601.04" y="424" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#1D4ED8" text-anchor="start" font-style="italic">31 routed feature pages + the public landing page</text>
+<rect x="36" y="910" width="1000" height="230" rx="18" fill="#F1F5F9" stroke="#CBD5E1" stroke-width="1.6"/>
+<rect x="54" y="898" width="251.67999999999998" height="24" rx="12" fill="#334155"/>
+<text x="179.83999999999997" y="914" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">shared — imports no feature (G12)</text>
+<rect x="1066" y="910" width="998" height="230" rx="18" fill="#F0FDFA" stroke="#99F6E4" stroke-width="1.6"/>
+<rect x="1084" y="898" width="370.0" height="24" rx="12" fill="#0F766E"/>
+<text x="1269.0" y="914" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Data flow — server state never lives in components</text>
+<rect x="36" y="1170" width="1000" height="200" rx="18" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1.6"/>
+<rect x="54" y="1158" width="530.0799999999999" height="24" rx="12" fill="#B45309"/>
+<text x="319.03999999999996" y="1174" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Boundaries enforced by lint (eslint-plugin-boundaries, default: disallow)</text>
+<rect x="1066" y="1170" width="998" height="200" rx="18" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1.6"/>
+<rect x="1084" y="1158" width="202.95999999999998" height="24" rx="12" fill="#475569"/>
+<text x="1185.48" y="1174" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">Quality gates and delivery</text>
+<path d="M 540 872 L 540 910" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#a-data)" stroke-linejoin="round"/>
+<path d="M 1118 302 L 1118 420" fill="none" stroke="#1D4ED8" stroke-width="1.8" marker-end="url(#a-fe)" stroke-linejoin="round"/>
+<path d="M 1438.8200000000002 1095 L 1460.8200000000002 1095" fill="none" stroke="#0F766E" stroke-width="1.8" marker-end="url(#a-be)" stroke-linejoin="round"/>
+<path d="M 1313.88 1095 L 1335.88 1095" fill="none" stroke="#1D4ED8" stroke-width="1.8" marker-end="url(#a-fe)" stroke-linejoin="round"/>
+<path d="M 1201.7 1095 L 1223.7 1095" fill="none" stroke="#1D4ED8" stroke-width="1.8" marker-end="url(#a-fe)" stroke-linejoin="round"/>
+<path d="M 1563.76 1049 L 1585.76 1049" fill="none" stroke="#1D4ED8" stroke-width="1.8" marker-end="url(#a-fe)" stroke-linejoin="round"/>
+<path d="M 1464.34 1049 L 1486.34 1049" fill="none" stroke="#1D4ED8" stroke-width="1.8" marker-end="url(#a-fe)" stroke-linejoin="round"/>
+<path d="M 1281.98 1049 L 1303.98 1049" fill="none" stroke="#0F766E" stroke-width="1.8" marker-end="url(#a-be)" stroke-linejoin="round"/>
+<path d="M 1176.18 1049 L 1198.18 1049" fill="none" stroke="#0F766E" stroke-width="1.8" marker-end="url(#a-be)" stroke-linejoin="round"/>
+<path d="M 1659.4599999999998 1003 L 1681.4599999999998 1003" fill="none" stroke="#1D4ED8" stroke-width="1.8" marker-end="url(#a-fe)" stroke-linejoin="round"/>
+<path d="M 1566.4199999999998 1003 L 1588.4199999999998 1003" fill="none" stroke="#1D4ED8" stroke-width="1.8" marker-end="url(#a-fe)" stroke-linejoin="round"/>
+<path d="M 1415.9599999999998 1003 L 1437.9599999999998 1003" fill="none" stroke="#0F766E" stroke-width="1.8" marker-end="url(#a-be)" stroke-linejoin="round"/>
+<path d="M 1259.12 1003 L 1281.12 1003" fill="none" stroke="#0F766E" stroke-width="1.8" marker-end="url(#a-be)" stroke-linejoin="round"/>
+<path d="M 1646.7 957 L 1668.7 957" fill="none" stroke="#334155" stroke-width="1.8" marker-end="url(#a-data)" stroke-linejoin="round"/>
+<path d="M 1489.8600000000001 957 L 1511.8600000000001 957" fill="none" stroke="#1D4ED8" stroke-width="1.8" marker-end="url(#a-fe)" stroke-linejoin="round"/>
+<path d="M 1326.64 957 L 1348.64 957" fill="none" stroke="#1D4ED8" stroke-width="1.8" marker-end="url(#a-fe)" stroke-linejoin="round"/>
+<path d="M 1239.98 957 L 1261.98 957" fill="none" stroke="#1D4ED8" stroke-width="1.8" marker-end="url(#a-fe)" stroke-linejoin="round"/>
+<rect x="56" y="198" width="300" height="120" rx="12" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="1.4" filter="url(#sh)"/>
+<rect x="56" y="198" width="5" height="120" rx="2.5" fill="#1D4ED8"/>
+<rect x="372" y="198" width="420" height="120" rx="12" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="1.4" filter="url(#sh)"/>
+<rect x="372" y="198" width="5" height="120" rx="2.5" fill="#1D4ED8"/>
+<rect x="808" y="198" width="620" height="120" rx="12" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="1.4" filter="url(#sh)"/>
+<rect x="808" y="198" width="5" height="120" rx="2.5" fill="#1D4ED8"/>
+<rect x="1444" y="198" width="600" height="120" rx="12" fill="#FFFFFF" stroke="#FBCFE8" stroke-width="1.4" stroke-dasharray="6 4" filter="url(#sh)"/>
+<rect x="1444" y="198" width="5" height="120" rx="2.5" fill="#BE185D"/>
+<rect x="56" y="452" width="488" height="120" rx="12" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="1.4" filter="url(#sh)"/>
+<rect x="56" y="452" width="5" height="120" rx="2.5" fill="#1D4ED8"/>
+<rect x="473.6" y="461" width="60.4" height="18" rx="9" fill="#EFF6FF" stroke="#BFDBFE"/>
+<rect x="560" y="452" width="488" height="120" rx="12" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="1.4" filter="url(#sh)"/>
+<rect x="560" y="452" width="5" height="120" rx="2.5" fill="#1D4ED8"/>
+<rect x="971.8" y="461" width="66.19999999999999" height="18" rx="9" fill="#EFF6FF" stroke="#BFDBFE"/>
+<rect x="1064" y="452" width="488" height="120" rx="12" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="1.4" filter="url(#sh)"/>
+<rect x="1064" y="452" width="5" height="120" rx="2.5" fill="#1D4ED8"/>
+<rect x="1470.0" y="461" width="72.0" height="18" rx="9" fill="#EFF6FF" stroke="#BFDBFE"/>
+<rect x="1568" y="452" width="488" height="120" rx="12" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="1.4" filter="url(#sh)"/>
+<rect x="1568" y="452" width="5" height="120" rx="2.5" fill="#1D4ED8"/>
+<rect x="2008.8" y="461" width="37.2" height="18" rx="9" fill="#EFF6FF" stroke="#BFDBFE"/>
+<rect x="56" y="588" width="488" height="120" rx="12" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="1.4" filter="url(#sh)"/>
+<rect x="56" y="588" width="5" height="120" rx="2.5" fill="#1D4ED8"/>
+<rect x="479.4" y="597" width="54.599999999999994" height="18" rx="9" fill="#EFF6FF" stroke="#BFDBFE"/>
+<rect x="560" y="588" width="488" height="120" rx="12" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="1.4" filter="url(#sh)"/>
+<rect x="560" y="588" width="5" height="120" rx="2.5" fill="#1D4ED8"/>
+<rect x="983.4" y="597" width="54.599999999999994" height="18" rx="9" fill="#EFF6FF" stroke="#BFDBFE"/>
+<rect x="1064" y="588" width="488" height="120" rx="12" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="1.4" filter="url(#sh)"/>
+<rect x="1064" y="588" width="5" height="120" rx="2.5" fill="#1D4ED8"/>
+<rect x="1487.4" y="597" width="54.599999999999994" height="18" rx="9" fill="#EFF6FF" stroke="#BFDBFE"/>
+<rect x="1568" y="588" width="488" height="120" rx="12" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="1.4" filter="url(#sh)"/>
+<rect x="1568" y="588" width="5" height="120" rx="2.5" fill="#1D4ED8"/>
+<rect x="1991.4" y="597" width="54.599999999999994" height="18" rx="9" fill="#EFF6FF" stroke="#BFDBFE"/>
+<rect x="56" y="724" width="488" height="120" rx="12" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="1.4" filter="url(#sh)"/>
+<rect x="56" y="724" width="5" height="120" rx="2.5" fill="#1D4ED8"/>
+<rect x="473.6" y="733" width="60.4" height="18" rx="9" fill="#EFF6FF" stroke="#BFDBFE"/>
+<rect x="560" y="724" width="488" height="120" rx="12" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="1.4" filter="url(#sh)"/>
+<rect x="560" y="724" width="5" height="120" rx="2.5" fill="#1D4ED8"/>
+<rect x="989.2" y="733" width="48.8" height="18" rx="9" fill="#EFF6FF" stroke="#BFDBFE"/>
+<rect x="1064" y="724" width="488" height="120" rx="12" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="1.4" filter="url(#sh)"/>
+<rect x="1064" y="724" width="5" height="120" rx="2.5" fill="#1D4ED8"/>
+<rect x="1493.2" y="733" width="48.8" height="18" rx="9" fill="#EFF6FF" stroke="#BFDBFE"/>
+<rect x="1568" y="724" width="488" height="120" rx="12" fill="#FFFFFF" stroke="#BFDBFE" stroke-width="1.4" filter="url(#sh)"/>
+<rect x="1568" y="724" width="5" height="120" rx="2.5" fill="#1D4ED8"/>
+<rect x="1997.2" y="733" width="48.8" height="18" rx="9" fill="#EFF6FF" stroke="#BFDBFE"/>
+<rect x="56" y="940" width="470" height="136" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.4" filter="url(#sh)"/>
+<rect x="56" y="940" width="5" height="136" rx="2.5" fill="#334155"/>
+<rect x="542" y="940" width="474" height="136" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.4" filter="url(#sh)"/>
+<rect x="542" y="940" width="5" height="136" rx="2.5" fill="#334155"/>
+<rect x="1086" y="944" width="153.98" height="26" rx="13.0" fill="#FFFFFF" stroke="#BFDBFE"/>
+<rect x="1261.98" y="944" width="64.66" height="26" rx="13.0" fill="#FFFFFF" stroke="#BFDBFE"/>
+<rect x="1348.64" y="944" width="141.21999999999997" height="26" rx="13.0" fill="#FFFFFF" stroke="#BFDBFE"/>
+<rect x="1511.8600000000001" y="944" width="134.83999999999997" height="26" rx="13.0" fill="#FFFFFF" stroke="#BFDBFE"/>
+<rect x="1668.7" y="944" width="128.45999999999998" height="26" rx="13.0" fill="#FFFFFF" stroke="#CBD5E1"/>
+<rect x="1086" y="990" width="173.11999999999998" height="26" rx="13.0" fill="#FFFFFF" stroke="#CBD5E1"/>
+<rect x="1281.12" y="990" width="134.83999999999997" height="26" rx="13.0" fill="#FFFFFF" stroke="#99F6E4"/>
+<rect x="1437.9599999999998" y="990" width="128.45999999999998" height="26" rx="13.0" fill="#FFFFFF" stroke="#99F6E4"/>
+<rect x="1588.4199999999998" y="990" width="71.03999999999999" height="26" rx="13.0" fill="#FFFFFF" stroke="#BFDBFE"/>
+<rect x="1681.4599999999998" y="990" width="51.9" height="26" rx="13.0" fill="#FFFFFF" stroke="#BFDBFE"/>
+<rect x="1086" y="1036" width="90.17999999999999" height="26" rx="13.0" fill="#FFFFFF" stroke="#CBD5E1"/>
+<rect x="1198.18" y="1036" width="83.8" height="26" rx="13.0" fill="#FFFFFF" stroke="#99F6E4"/>
+<rect x="1303.98" y="1036" width="160.35999999999999" height="26" rx="13.0" fill="#FFFFFF" stroke="#99F6E4"/>
+<rect x="1486.34" y="1036" width="77.41999999999999" height="26" rx="13.0" fill="#FFFFFF" stroke="#BFDBFE"/>
+<rect x="1585.76" y="1036" width="77.41999999999999" height="26" rx="13.0" fill="#FFFFFF" stroke="#BFDBFE"/>
+<rect x="1086" y="1082" width="115.69999999999999" height="26" rx="13.0" fill="#FFFFFF" stroke="#99F6E4"/>
+<rect x="1223.7" y="1082" width="90.17999999999999" height="26" rx="13.0" fill="#FFFFFF" stroke="#BFDBFE"/>
+<rect x="1335.88" y="1082" width="102.94" height="26" rx="13.0" fill="#FFFFFF" stroke="#BFDBFE"/>
+<rect x="1460.8200000000002" y="1082" width="102.94" height="26" rx="13.0" fill="#FFFFFF" stroke="#99F6E4"/>
+<rect x="56" y="1200" width="960" height="136" rx="12" fill="#FFFFFF" stroke="#FDE68A" stroke-width="1.4" filter="url(#sh)"/>
+<rect x="56" y="1200" width="5" height="136" rx="2.5" fill="#B45309"/>
+<rect x="1086" y="1200" width="470" height="136" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.4" filter="url(#sh)"/>
+<rect x="1086" y="1200" width="5" height="136" rx="2.5" fill="#475569"/>
+<rect x="1572" y="1200" width="472" height="136" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.4" filter="url(#sh)"/>
+<rect x="1572" y="1200" width="5" height="136" rx="2.5" fill="#475569"/>
+<text x="36" y="112" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="700" fill="#64748B" text-anchor="start">LEGEND</text>
+<rect x="36" y="126" width="22" height="14" rx="4" fill="#EFF6FF" stroke="#1D4ED8"/>
+<text x="66" y="137" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#334155" text-anchor="start">Ring / module</text>
+<rect x="169.22" y="126" width="22" height="14" rx="4" fill="#F1F5F9" stroke="#334155"/>
+<text x="199.22" y="137" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#334155" text-anchor="start">Shared ring</text>
+<rect x="290.56" y="126" width="22" height="14" rx="4" fill="#F0FDFA" stroke="#0F766E"/>
+<text x="320.56" y="137" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#334155" text-anchor="start">Backend</text>
+<rect x="388.14" y="126" width="22" height="14" rx="4" fill="#F8FAFC" stroke="#475569"/>
+<text x="418.14" y="137" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#334155" text-anchor="start">Build, test, delivery</text>
+<rect x="568.88" y="126" width="22" height="14" rx="4" fill="#FFFBEB" stroke="#B45309"/>
+<text x="598.88" y="137" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#334155" text-anchor="start">Boundary rule</text>
+<rect x="702.1" y="126" width="22" height="14" rx="4" fill="#FDF2F8" stroke="#BE185D" stroke-dasharray="5 3"/>
+<text x="732.1" y="137" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="400" fill="#334155" text-anchor="start">Decided, not built</text>
+<text x="72" y="220" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1D4ED8" text-anchor="start">entry — main.tsx</text>
+<text x="72" y="240" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">QueryClient + QueryClientProvider</text>
+<text x="72" y="256.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">i18n init · theme (design tokens)</text>
+<text x="72" y="273.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">setupApiInterceptors · sessionCleanup</text>
+<text x="72" y="289.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">dev error reporter (dev only)</text>
+<text x="388" y="220" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1D4ED8" text-anchor="start">router — index.tsx, routes.ts</text>
+<text x="388" y="240" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">39 route entries · lazy-loaded pages</text>
+<text x="388" y="256.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">ProtectedRoute (session) · PublicRoute</text>
+<text x="388" y="273.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">RouteErrorFallback · ForcedNotFound (/components/*)</text>
+<text x="388" y="289.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">pages/landing: LandingPage (public)</text>
+<text x="824" y="220" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1D4ED8" text-anchor="start">app — layout, providers, hooks</text>
+<text x="824" y="240" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">RootLayout · AppLayout · Sidebar · NavDrawer · AppBar · PageHeader*</text>
+<text x="824" y="256.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">SystemStatusBanner (degraded, rate limited) · BetaBanner · NotificationsMenu</text>
+<text x="824" y="273.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">AppErrorBoundary · RouteAnnouncer · SkipToContent · UserProfileMenu</text>
+<text x="824" y="289.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">useBreadcrumb · the only ring allowed to import any feature</text>
+<text x="1460" y="220" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#BE185D" text-anchor="start">Decided changes to the shell (alcance §4.15–§4.17, §5)</text>
+<text x="1460" y="240" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">Global dashboard leaves the customer sidebar (DSH-02)</text>
+<text x="1460" y="256.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">Notification bell shows real deliveries or is removed (NTF-03)</text>
+<text x="1460" y="273.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">Organisation settings and audit view for the org administrator</text>
+<text x="1460" y="289.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">(SET-01, AUD-05) · Report-issue link only where a URL is set</text>
+<text x="72" y="474" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1D4ED8" text-anchor="start">overlay</text>
+<text x="503.79999999999995" y="474" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#1D4ED8" text-anchor="middle">47 files</text>
+<text x="72" y="494" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">ExecutionOverlayPage — the flagship</text>
+<text x="72" y="510.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">import, review queue, case detail,</text>
+<text x="72" y="527.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">step mapper, sync jobs, feature import</text>
+<text x="72" y="543.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">useExecutionOverlayVM · 18 components</text>
+<text x="576" y="474" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1D4ED8" text-anchor="start">scenario</text>
+<text x="1004.9" y="474" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#1D4ED8" text-anchor="middle">authoring</text>
+<text x="576" y="494" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">ScenarioBuilderPage · FeatureDetailPage</text>
+<text x="576" y="510.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">SuitesPage</text>
+<text x="576" y="527.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">native authoring, Gherkin paste,</text>
+<text x="576" y="543.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">decided: element inspector, fixtures</text>
+<text x="1080" y="474" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1D4ED8" text-anchor="start">catalog</text>
+<text x="1506.0" y="474" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#1D4ED8" text-anchor="middle">capability</text>
+<text x="1080" y="494" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">StepsPage — the published catalog</text>
+<text x="1080" y="510.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">CustomStepsPage — macros</text>
+<text x="1080" y="527.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">decided: macro versions and</text>
+<text x="1080" y="543.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">organisation sharing (MAC-02/03)</text>
+<text x="1584" y="474" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1D4ED8" text-anchor="start">execution</text>
+<text x="2027.4" y="474" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#1D4ED8" text-anchor="middle">runs</text>
+<text x="1584" y="494" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">ExecutionLivePage (STOMP progress)</text>
+<text x="1584" y="510.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">ExecutionResultsPage (evidence)</text>
+<text x="1584" y="527.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">useExecutionWebSocket · wsReducer</text>
+<text x="1584" y="543.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">run assistant panel (from assistant)</text>
+<text x="72" y="610" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1D4ED8" text-anchor="start">project</text>
+<text x="506.70000000000005" y="610" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#1D4ED8" text-anchor="middle">8 pages</text>
+<text x="72" y="630" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">Projects · ProjectDetail · Settings</text>
+<text x="72" y="646.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">Integrations · Environments · History</text>
+<text x="72" y="663.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">SuiteDetail · CertificateManager</text>
+<text x="72" y="679.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">decided: name/description editable</text>
+<text x="576" y="610" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1D4ED8" text-anchor="start">imports</text>
+<text x="1010.7" y="610" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#1D4ED8" text-anchor="middle">3 pages</text>
+<text x="576" y="630" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">ImportsPage · ScenarioSuggestionsPage</text>
+<text x="576" y="646.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">ScenarioDraftBuilderPage</text>
+<text x="576" y="663.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">Swagger, Postman, user story drafts</text>
+<text x="576" y="679.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">decided: redesign onto canonical model</text>
+<text x="1080" y="610" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1D4ED8" text-anchor="start">auth</text>
+<text x="1514.7" y="610" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#1D4ED8" text-anchor="middle">7 pages</text>
+<text x="1080" y="630" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">Login · MfaChallenge · Signup</text>
+<text x="1080" y="646.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">Forgot/Reset · ForceChangePassword</text>
+<text x="1080" y="663.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">OidcCallback · session store</text>
+<text x="1080" y="679.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">decided: WebAuthn (IAM-05)</text>
+<text x="1584" y="610" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1D4ED8" text-anchor="start">dashboard</text>
+<text x="2018.7" y="610" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#1D4ED8" text-anchor="middle">2 pages</text>
+<text x="1584" y="630" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">GlobalDashboardPage</text>
+<text x="1584" y="646.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">ProjectDashboardPage (recharts)</text>
+<text x="1584" y="663.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">flakiness, trends 7/30/90 days</text>
+<text x="1584" y="679.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">decided: coverage card removed</text>
+<text x="72" y="746" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1D4ED8" text-anchor="start">assistant</text>
+<text x="503.79999999999995" y="746" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#1D4ED8" text-anchor="middle">34 files</text>
+<text x="72" y="766" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">no pages — embedded in five screens</text>
+<text x="72" y="782.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">ProposalCard · Import/Run panels</text>
+<text x="72" y="799.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">FieldMapping · EnvironmentHints</text>
+<text x="72" y="815.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">useAiStream (STOMP) · AI off = hidden</text>
+<text x="576" y="746" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1D4ED8" text-anchor="start">admin</text>
+<text x="1013.6" y="746" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#1D4ED8" text-anchor="middle">1 page</text>
+<text x="576" y="766" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">AdminUsersPage</text>
+<text x="576" y="782.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">activation, roles, recovery</text>
+<text x="576" y="799.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">decided: organisation member</text>
+<text x="576" y="815.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">management, route-guarded</text>
+<text x="1080" y="746" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1D4ED8" text-anchor="start">settings</text>
+<text x="1517.6" y="746" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#1D4ED8" text-anchor="middle">1 page</text>
+<text x="1080" y="766" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">SettingsPage</text>
+<text x="1080" y="782.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">profile, security tab, MFA</text>
+<text x="1080" y="799.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">enrolment wizard, recovery codes</text>
+<text x="1080" y="815.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">no trusted devices (IAM-07)</text>
+<text x="1584" y="746" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#1D4ED8" text-anchor="start">onboarding</text>
+<text x="2021.6" y="746" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10" font-weight="700" fill="#1D4ED8" text-anchor="middle">1 page</text>
+<text x="1584" y="766" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">OnboardingPage</text>
+<text x="1584" y="782.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">reached by automatic redirect</text>
+<text x="1584" y="799.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">first-project guidance</text>
+<text x="72" y="962" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#334155" text-anchor="start">api · lib · store</text>
+<text x="72" y="982" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">api/client.ts: axios, baseURL from env · interceptors:</text>
+<text x="72" y="998.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">X-Correlation-ID, bearer token, single-flight refresh</text>
+<text x="72" y="1015.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">lib: stompClient (/ws-native), safeHref (G22), apiErrors,</text>
+<text x="72" y="1031.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">fetchAllPages, stepLocalization, downloadBlob …</text>
+<text x="72" y="1048.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">store (Zustand): ui, systemStatus · feature stores</text>
+<text x="558" y="962" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#334155" text-anchor="start">components · design · hooks · types · i18n</text>
+<text x="558" y="982" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">components/ui: the design-system primitives</text>
+<text x="558" y="998.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">design: tokens.ts, applyTheme (light and dark)</text>
+<text x="558" y="1015.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">hooks: debounce, countdown, status label, window class</text>
+<text x="558" y="1031.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">types: auth, step, scenarioDraft, common</text>
+<text x="558" y="1048.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">i18n: en, es, fr — 2,517 keys each, held equal by a test</text>
+<text x="1162.99" y="961.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8" text-anchor="middle">Page (presentational)</text>
+<text x="1294.31" y="961.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8" text-anchor="middle">VM hook</text>
+<text x="1419.25" y="961.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8" text-anchor="middle">TanStack Query hook</text>
+<text x="1579.2800000000002" y="961.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8" text-anchor="middle">feature api module</text>
+<text x="1732.93" y="961.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#334155" text-anchor="middle">shared/api/client</text>
+<text x="1172.56" y="1007.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#334155" text-anchor="middle">axios → api host /api/**</text>
+<text x="1348.54" y="1007.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#0F766E" text-anchor="middle">qa-platformBE REST</text>
+<text x="1502.1899999999998" y="1007.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#0F766E" text-anchor="middle">problem+json code</text>
+<text x="1623.9399999999998" y="1007.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8" text-anchor="middle">i18n key</text>
+<text x="1707.4099999999999" y="1007.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8" text-anchor="middle">toast</text>
+<text x="1131.09" y="1053.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#334155" text-anchor="middle">stompClient</text>
+<text x="1240.0800000000002" y="1053.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#0F766E" text-anchor="middle">/ws-native</text>
+<text x="1384.16" y="1053.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#0F766E" text-anchor="middle">/topic/executions/{id}</text>
+<text x="1525.05" y="1053.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8" text-anchor="middle">wsReducer</text>
+<text x="1624.47" y="1053.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8" text-anchor="middle">live page</text>
+<text x="1143.85" y="1099.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#0F766E" text-anchor="middle">AI stream topic</text>
+<text x="1268.79" y="1099.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8" text-anchor="middle">useAiStream</text>
+<text x="1387.3500000000001" y="1099.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#1D4ED8" text-anchor="middle">proposal card</text>
+<text x="1512.2900000000002" y="1099.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11" font-weight="700" fill="#0F766E" text-anchor="middle">accept → REST</text>
+<text x="1086" y="1128" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#475569" text-anchor="start" font-style="italic">Pages and components never import an api module or the client (no-restricted-imports); a hook does.</text>
+<text x="72" y="1222" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#B45309" text-anchor="start">Declared feature-to-feature imports only</text>
+<text x="72" y="1242" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">project → auth, execution, scenario, imports, assistant · execution → auth, project, assistant</text>
+<text x="72" y="1258.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">scenario → auth, project, catalog, execution, assistant · catalog → auth, project, assistant</text>
+<text x="72" y="1275.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">imports → auth, project, scenario, catalog, execution · dashboard → auth, project, onboarding</text>
+<text x="72" y="1291.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">overlay → auth, project, execution, catalog, assistant · assistant → auth, overlay (types only)</text>
+<text x="72" y="1308.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">project must never import overlay · assistant owns every AI proposal concern</text>
+<text x="1102" y="1222" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#475569" text-anchor="start">Tests</text>
+<text x="1102" y="1242" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">Vitest: ~1,640 tests in 219 files, coverage gate</text>
+<text x="1102" y="1258.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">Playwright mocked: 7 specs, fail on any unmocked /api</text>
+<text x="1102" y="1275.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">(G13) incl. axe WCAG 2.1 AA and reflow 320–1,440 px</text>
+<text x="1102" y="1291.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">Playwright real stack: overlay, TestRail, Xray Cloud</text>
+<text x="1102" y="1308.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">against BE + simulators (e2e.yml)</text>
+<text x="1588" y="1222" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13.5" font-weight="700" fill="#475569" text-anchor="start">Build and ship</text>
+<text x="1588" y="1242" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">type-check · lint · test:coverage · build · test:e2e</text>
+<text x="1588" y="1258.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">scripts/check-ci-gates.sh · check-self-contained.sh</text>
+<text x="1588" y="1275.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">Docker: nginx on 8080, security headers + CSP (G22)</text>
+<text x="1588" y="1291.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">Image built by qa-platformBE deploy.yml at fe.ref</text>
+<text x="1588" y="1308.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="11.5" font-weight="400" fill="#334155" text-anchor="start">Decided: E2E on Firefox and WebKit too (NFR-12)</text>
+<rect x="1065.64" y="385.0" width="104.72" height="20" rx="7" fill="#FFFFFF" stroke="#BFDBFE"/>
+<text x="1118" y="400.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#1D4ED8" text-anchor="middle">imports features</text>
+<rect x="563.31" y="881.0" width="93.38000000000001" height="20" rx="7" fill="#FFFFFF" stroke="#CBD5E1"/>
+<text x="610" y="896.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="10.5" font-weight="400" fill="#334155" text-anchor="middle">imports shared</text>
+<text x="36" y="40" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="24" font-weight="700" fill="#FFFFFF">qa-platformFE — web console architecture</text>
+<text x="36" y="64" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="13" fill="#CBD5E1">React 18 · TypeScript · Vite · TanStack Query · Zustand · i18next · Tailwind · 43,200 lines of TypeScript under src/ (tests excluded)</text>
+<text x="2064" y="40" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" fill="#94A3B8" text-anchor="end">Verified against the code on 2026-10-20 · dashed = decided in alcance.md, not built</text>
+<text x="2064" y="60" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="12" font-weight="700" fill="#E2E8F0" text-anchor="end">A·Spectra</text>
+</svg>

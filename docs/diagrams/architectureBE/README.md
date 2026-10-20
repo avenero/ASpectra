@@ -8,6 +8,11 @@ Status: Current-verified (code, 2026-10-20) unless a section says otherwise | Ow
 Anything not shown here: the code, `qa-platformBE/AGENTS.md` and `qa-platformBE/.claude/CLAUDE.md`, and
 the shared [platform.md](../../architecture/platform.md).
 
+![qa-platformBE — backend architecture](qa-platformBE.svg)
+
+The diagram above ([qa-platformBE.svg](qa-platformBE.svg)) is the one-page view of this repository; the files below go
+deeper on each part.
+
 | File | Scope |
 |---|---|
 | [01-bounded-contexts.md](01-bounded-contexts.md) | The bounded-context map, legacy coexistence, ArchUnit enforcement — `intelligence` included as a first-class BC |

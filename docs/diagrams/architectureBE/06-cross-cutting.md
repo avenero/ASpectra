@@ -10,7 +10,7 @@ Status: Current-verified (code, 2026-10-03; spot-checked 2026-10-20) | Owner: TB
 | Outbound | `OutboundUrlPolicy` -> Core `OutboundHostPolicy`, on save and before each call, no redirects |
 | Observability | `X-Correlation-ID` in MDC and async; Micrometer; resilience4j breakers and bulkheads |
 | Runtime | `spring.threads.virtual.enabled: true` — blocking I/O parks a virtual thread, not a pooled one |
-| Scale | Single instance today: in-memory STOMP broker, evidence on local disk (a second instance answers 404), runs inside the backend JVM, OIDC handoff and two-factor state in instance memory. The outbound limiter (connectors, AI) is database-backed and shared; the inbound HTTP limiter is in memory per instance. Target: alcance §3 and §9.2 (EVD-09, IAM-12, NFR-05, NFR-06) |
+| Scale | Single instance today: in-JVM STOMP broker whose frames fan out across instances through Postgres NOTIFY (`BrokerFanout`), evidence on local disk (a second instance answers 404), runs inside the backend JVM, OIDC handoff and two-factor state in instance memory. The outbound limiter (connectors, AI) is database-backed and shared; the inbound HTTP limiter is in memory per instance. Target: alcance §3 and §9.2 (EVD-09, IAM-12, NFR-05, NFR-06) |
 
 ## AI-specific rows
 
