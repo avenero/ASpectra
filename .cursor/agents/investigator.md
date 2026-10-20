@@ -182,9 +182,9 @@ Use a tool if your session exposes it; otherwise fall back to the Shell equivale
 | Logs | Shell: `docker compose logs`, `docker logs <container>`, then Grep on the output. Search on `executionId`, `projectId`, `correlationId`, `scenarioName`, `failureKind`. |
 | Database state | Shell with `psql`, `SELECT` only. Never DML or DDL, and never print credentials or token values. |
 | Timeline of changes | Shell, read only: `git log -p`, `git blame`, `git show`, `git diff`. Plugin-github MCP: `list_commits`, `get_commit`, `search_code`, `pull_request_read`. |
-| Reproduce a frontend symptom | cursor-ide-browser MCP (`browser_navigate`, `browser_snapshot`, `browser_cdp` with `Network.enable` and `Log.enable`). Skill: `/Users/abelvenero/Documents/projects/Kiu-ALeon/.claude/skills/agent-browser/SKILL.md`, read before driving a browser. |
+| Reproduce a frontend symptom | cursor-ide-browser MCP (`browser_navigate`, `browser_snapshot`, `browser_cdp` with `Network.enable` and `Log.enable`). Skill: `.cursor/skills/agent-browser/SKILL.md`, read before driving a browser. |
 | Reproduce a backend or Core symptom | Run an existing test or an existing endpoint. Do not edit tests. Never run a targeted Gradle test in a checkout while the BE `check` gate is running. |
-| Check how a library behaves (transaction semantics, retry, caching, reconnect) | Context7 MCP: `resolve-library-id`, then `query-docs`. Skill: `/Users/abelvenero/.cursor/plugins/cache/cursor-public/context7-plugin/58a36cea87ea887e7bb4850409f1f9ea58dae5e5/skills/context7-mcp/SKILL.md`. |
+| Check how a library behaves (transaction semantics, retry, caching, reconnect) | Context7 MCP: `resolve-library-id`, then `query-docs`. Skill: `context7-mcp` (Context7 Cursor plugin). |
 | Known upstream bugs | WebSearch and WebFetch, sparingly. Never put internal hostnames, data or secrets in a query. |
 
 Not for this agent:

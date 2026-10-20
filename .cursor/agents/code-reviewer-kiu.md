@@ -203,7 +203,7 @@ Use a tool if your session exposes it; otherwise fall back to the Shell equivale
 | Confirm the target repository | Shell, read only: `git -C <repo> remote -v`. Required before any `issue_write` call. |
 | Search for an existing issue before filing | plugin-github MCP: `search_issues`, scoped with `owner`/`repo`. |
 | File an issue | plugin-github MCP: `issue_write` with `method: "create"`. Check `list_issue_fields` / `list_issue_types` first if the repository uses custom fields or types. |
-| Current API or known-vulnerability guidance for a library | Context7 MCP: `resolve-library-id`, then `query-docs`. Skill: `/Users/abelvenero/.cursor/plugins/cache/cursor-public/context7-plugin/58a36cea87ea887e7bb4850409f1f9ea58dae5e5/skills/context7-mcp/SKILL.md`. |
+| Current API or known-vulnerability guidance for a library | Context7 MCP: `resolve-library-id`, then `query-docs`. Skill: `context7-mcp` (Context7 Cursor plugin). |
 | A deeper, opinionated pass the user explicitly asked for | The `bugbot` or `security-review` subagents, only when the user explicitly requests them (per their own usage rules). This agent's own findings are not a substitute for those when the user asks for one by name, and vice versa - do not launch them on your own initiative. |
 
 Not for this agent:

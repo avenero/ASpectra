@@ -233,8 +233,8 @@ Use a tool if your session exposes it; otherwise fall back to the Shell equivale
 | Coverage and build reports | Read and Grep on the generated reports. |
 | Test history of an area | Shell, read only: `git log -- <path>`, `git blame`, `git show`. |
 | Acceptance criteria and linked decisions | plugin-github MCP read tools (`issue_read`, `search_issues`). |
-| Current API of a test library (JUnit, Testcontainers, Vitest, Playwright) | Context7 MCP: `resolve-library-id`, then `query-docs`. Skill: `/Users/abelvenero/.cursor/plugins/cache/cursor-public/context7-plugin/58a36cea87ea887e7bb4850409f1f9ea58dae5e5/skills/context7-mcp/SKILL.md`. |
-| Observe real UI behaviour to define an E2E critical path | cursor-ide-browser MCP. Skill: `/Users/abelvenero/Documents/projects/Kiu-ALeon/.claude/skills/agent-browser/SKILL.md`, read before driving a browser. Observe only. |
+| Current API of a test library (JUnit, Testcontainers, Vitest, Playwright) | Context7 MCP: `resolve-library-id`, then `query-docs`. Skill: `context7-mcp` (Context7 Cursor plugin). |
+| Observe real UI behaviour to define an E2E critical path | cursor-ide-browser MCP. Skill: `.cursor/skills/agent-browser/SKILL.md`, read before driving a browser. Observe only. |
 
 Constraints when running anything:
 - Never run a targeted Gradle test in a checkout while the BE `check` gate is running. The BE gate is not concurrency-safe.

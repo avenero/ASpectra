@@ -223,8 +223,8 @@ Use a tool if your session exposes it; otherwise fall back to the Shell equivale
 | After each substantive edit | ReadLints on the edited files. Fix what your edit introduced. |
 | Track plan steps | TodoWrite, one item per plan step, marked complete as each is verified. |
 | Build, test, gates | Shell with the gate commands above. Run long gates in the background and poll with AwaitShell instead of sleeping inside Shell. |
-| Use the current API of a library (required by the code style rules) | Context7 MCP: `resolve-library-id`, then `query-docs`. Skill: `/Users/abelvenero/.cursor/plugins/cache/cursor-public/context7-plugin/58a36cea87ea887e7bb4850409f1f9ea58dae5e5/skills/context7-mcp/SKILL.md`. |
-| Verify a UI acceptance criterion by hand | cursor-ide-browser MCP. Skill: `/Users/abelvenero/Documents/projects/Kiu-ALeon/.claude/skills/agent-browser/SKILL.md`, read before driving a browser. Use only when a criterion cannot be proven by a test. |
+| Use the current API of a library (required by the code style rules) | Context7 MCP: `resolve-library-id`, then `query-docs`. Skill: `context7-mcp` (Context7 Cursor plugin). |
+| Verify a UI acceptance criterion by hand | cursor-ide-browser MCP. Skill: `.cursor/skills/agent-browser/SKILL.md`, read before driving a browser. Use only when a criterion cannot be proven by a test. |
 
 Not for this agent:
 - The `code-architect` subagent. That is designing, which the plan already did.

@@ -18,7 +18,7 @@ the user asks for it literally. A green gate is not a request, and neither is a 
 
 ## Workspace facts you must know
 
-The workspace root (`/Users/abelvenero/Documents/projects/A·Spectra/`) is NOT a git repository.
+The workspace root (the ASpectra directory) is NOT a git repository.
 Each sub-folder is its own independent git repo:
 - `qa-platformCore/` — Java 21 / Gradle multi-module
 - `qa-platformBE/`   — Spring Boot 3.5 / Java 21 / Gradle

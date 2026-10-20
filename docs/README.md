@@ -46,7 +46,7 @@ separate, approved documentation update.
 | ID | Issue | Location |
 |---|---|---|
 | C1 | "AI design" and "Technical design" sections describe a FastAPI/uv backend and a "legal document"; they contradict the Spring Boot/React stack described in the same file | `.claude/CLAUDE.md` |
-| C2 | States that the workspace root is not a Git repository; no longer true | `.claude/CLAUDE.md` |
+| C2 | States that the workspace root is not a Git repository; no longer true | `.claude/CLAUDE.md`, `architect.md` and `gitFlow.md` in `.claude/agents/` and `.cursor/agents/` |
 | C3 | States "GitHub Actions is off"; workflow files exist in all three repositories, including a production deploy | `.claude/CLAUDE.md`, `.claude/ORCHESTRATION.md` |
 | C4 | The shared rule body exists in three hand-synced copies | `.claude/CLAUDE.md`, `.claude/ORCHESTRATION.md`, `.cursor/agents/AGENTS.md` |
 | C5 | Agent definitions are duplicated and have drifted | `.claude/agents/`, `.cursor/agents/` |
@@ -55,4 +55,3 @@ separate, approved documentation update.
 | C8 | `.cursor/agents/AGENTS.md` may be read by Cursor as a subagent definition; verify | `.cursor/agents/` |
 | C9 | The SUMMARY section ends mid-sentence | `.claude/CLAUDE.md` |
 | C10 | Technical content not validated against the code | `alcance.md`, `requirements.md`, `diagrams/` |
-| C11 | Agent definitions contain machine-specific absolute paths (`/Users/...`); replace with relative paths before publishing | `.claude/agents/`, `.cursor/agents/` |

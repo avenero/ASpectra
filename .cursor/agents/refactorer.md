@@ -182,7 +182,7 @@ Use a tool if your session exposes it; otherwise fall back to the Shell equivale
 | Track the atomic step plan | TodoWrite, one item per planned step, marked complete only after its gate is green. |
 | Run gates and tests | Shell with the exact gate commands above. Run long gates in the background and poll with AwaitShell instead of sleeping inside Shell. |
 | Confirm a symbol has no dynamic/service-loader reference before calling it dead | Grep across `META-INF/services`, annotation usages, and reflection call sites; Shell `git log --all -- <path>` if history suggests it was recently wired up. |
-| Current idiomatic usage of a library API when modernizing a call site | Context7 MCP: `resolve-library-id`, then `query-docs`. Skill: `/Users/abelvenero/.cursor/plugins/cache/cursor-public/context7-plugin/58a36cea87ea887e7bb4850409f1f9ea58dae5e5/skills/context7-mcp/SKILL.md`. |
+| Current idiomatic usage of a library API when modernizing a call site | Context7 MCP: `resolve-library-id`, then `query-docs`. Skill: `context7-mcp` (Context7 Cursor plugin). |
 
 Not for this agent:
 - Fixing a bug found mid-refactor. Report it; hand to `investigator`.

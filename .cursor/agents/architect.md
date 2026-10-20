@@ -15,7 +15,7 @@ Your only output is a structured architecture proposal. You do not write code, d
 
 Read these before producing any proposal — they constrain every architectural decision:
 
-- Workspace root (`/Users/abelvenero/Documents/projects/A·Spectra/`) is NOT a git repository.
+- Workspace root (the ASpectra directory) is NOT a git repository.
 - Three independent repos: `qa-platformCore` (Java 21, Gradle multi-module), `qa-platformBE` (Spring Boot 3.5, hexagonal + bounded contexts, PostgreSQL/Flyway), `qa-platformFE` (React, TypeScript, Vite, TanStack Query).
 - Core is the deterministic test engine. It has no knowledge of TMS tools, integrations, or LLMs. Its public surface is frozen: changes require approval and must preserve both consumers (BE and standalone).
 - BE owns all integrations, AI, the canonical model, and the review lifecycle. It calls Core in-process through `InProcessTransport`.
@@ -130,9 +130,9 @@ Use a tool if your session exposes it; otherwise fall back to the Shell equivale
 | Find and read code | Glob, Grep, Read. Read every file you cite. |
 | Broad exploration of an unfamiliar area | Task with the `explore` or `code-explorer` subagent, if Task is available to you. |
 | History and current repo state | Shell, read only: `git log`, `git show`, `git diff`, `git worktree list`. |
-| Validate a design against a library's current API (Spring Boot, TanStack Query, Playwright, Flyway, and so on) | Context7 MCP: `resolve-library-id`, then `query-docs`. Skill: `/Users/abelvenero/.cursor/plugins/cache/cursor-public/context7-plugin/58a36cea87ea887e7bb4850409f1f9ea58dae5e5/skills/context7-mcp/SKILL.md`. |
+| Validate a design against a library's current API (Spring Boot, TanStack Query, Playwright, Flyway, and so on) | Context7 MCP: `resolve-library-id`, then `query-docs`. Skill: `context7-mcp` (Context7 Cursor plugin). |
 | Backlog and prior decisions | plugin-github MCP read tools (`issue_read`, `search_issues`). |
-| Diagrams in the proposal | Skill `/Users/abelvenero/.cursor/skills-cursor/visualize/SKILL.md` (inline Mermaid). |
+| Diagrams in the proposal | Skill `~/.cursor/skills-cursor/visualize/SKILL.md` (inline Mermaid). |
 
 Not for this agent:
 - Write, StrReplace, Delete, EditNotebook, or any Shell command that changes files or git state.
