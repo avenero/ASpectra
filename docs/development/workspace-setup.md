@@ -8,7 +8,7 @@ application are in that repository's own README.
 ## 1. Clone the governance repository
 
 ```bash
-git clone https://github.com/<OWNER>/ASpectra.git ASpectra   # URL TBD until published
+git clone https://github.com/avenero/ASpectra.git ASpectra
 cd ASpectra
 ```
 

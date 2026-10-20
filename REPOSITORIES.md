@@ -15,7 +15,7 @@ Change both in the same commit.
 | Field | Value |
 |---|---|
 | Name | ASpectra |
-| URL | `https://github.com/<OWNER>/ASpectra` (TBD: not published yet) |
+| URL | https://github.com/avenero/ASpectra (private) |
 | Branch | `main` |
 | Builds or deploys | Nothing |
 

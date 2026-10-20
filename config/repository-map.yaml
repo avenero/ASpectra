@@ -6,7 +6,7 @@ schema: 1
 project: aspectra
 governance_repository:
   name: ASpectra
-  url: https://github.com/<OWNER>/ASpectra   # TBD: not published yet
+  url: https://github.com/avenero/ASpectra   # private
   branch: main
 repositories:
   - name: qa-platformCore
