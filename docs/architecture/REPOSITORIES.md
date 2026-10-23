@@ -4,10 +4,10 @@ Status: Current-verified (from local Git remotes, 2026-10-20) | Owner: TBD
 
 ASpectra references three independent application repositories. Each one owns its source code,
 tests, build configuration, Git history, branches, tags and releases
-([rule R1](docs/architecture/repository-rules.md#r1-ownership)). ASpectra never tracks their
-files ([R3](docs/architecture/repository-rules.md#r3-root-isolation)).
+([rule R1](repository-rules.md#r1-ownership)). ASpectra never tracks their
+files ([R3](repository-rules.md#r3-root-isolation)).
 
-The machine-readable mirror of this page is [config/repository-map.yaml](config/repository-map.yaml).
+The machine-readable mirror of this page is [config/repository-map.yaml](../../config/repository-map.yaml).
 Change both in the same commit.
 
 ## Governance repository
@@ -54,7 +54,7 @@ Change both in the same commit.
 
 ## Coordination
 
-- Dependencies between the repositories: [docs/architecture/repository-boundaries.md](docs/architecture/repository-boundaries.md).
+- Dependencies between the repositories: [docs/architecture/repository-boundaries.md](repository-boundaries.md).
 - Changes that span repositories: [docs/development/cross-repository-changes.md](docs/development/cross-repository-changes.md).
-- Releases: [docs/deployment/release-coordination.md](docs/deployment/release-coordination.md).
+- Releases: [docs/deployment/release-coordination.md](../deployment/release-coordination.md).
 - Owners per repository: TBD.

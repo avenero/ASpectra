@@ -14,7 +14,7 @@ agent's behavior is made in the canonical file, with explicit approval (working 
 
 Shared rules the canonical file relies on: [platform.md](../../docs/architecture/platform.md),
 [repository-rules.md](../../docs/architecture/repository-rules.md),
-[engineering-rules.md](../../docs/development/engineering-rules.md),
+[engineering-rules.md](../../.claude/rules/engineering-rules.md),
 [git-workflow.md](../../docs/development/git-workflow.md) and
 [agent-pipeline.md](../../docs/development/agent-pipeline.md), plus the `AGENTS.md` of the repository you work in.
 

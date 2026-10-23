@@ -3,7 +3,7 @@
 Status: Intended (moved from `.claude/CLAUDE.md` and `.claude/ORCHESTRATION.md` on 2026-10-20) | Owner: TBD
 
 Mandatory rules for every human and agent working in any A·Spectra repository. Cross-repository rules
-R1-R16 are in [../architecture/repository-rules.md](../architecture/repository-rules.md); each
+R1-R16 are in [../architecture/repository-rules.md](../../docs/architecture/repository-rules.md); each
 repository's `AGENTS.md` adds its own.
 
 ## How to work (mandatory)

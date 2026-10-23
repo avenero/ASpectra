@@ -7,7 +7,7 @@ instruction file links here instead of copying them
 ([R7](#r7-single-source-of-truth)).
 
 They extend, and never weaken, the engineering rules in
-[../development/engineering-rules.md](../development/engineering-rules.md) (working rules 1-20, "What the
+[../development/engineering-rules.md](../../.claude/rules/engineering-rules.md) (working rules 1-20, "What the
 AI does, and never does", gates, guardrails G1-G36) and the git rules in
 [../development/git-workflow.md](../development/git-workflow.md). Those remain authoritative. Repository-specific rules live in each repository's `AGENTS.md`.
 

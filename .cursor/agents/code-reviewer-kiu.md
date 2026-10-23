@@ -6,14 +6,14 @@ description: Code review specialist for the A·Spectra monorepo. Use proactively
 
 # code-reviewer-kiu - Cursor adapter
 
-The canonical definition of this agent is [`.claude/agents/code-reviewer-kiu.md`](../../.claude/agents/code-reviewer-kiu.md). Read it
+The canonical definition of this agent is [`.claude/agents/code-reviewer-kiu.md`](../../.claude/agents/code-reviewer.md). Read it
 in full before acting and follow it exactly: role, required inputs, rules, process, output format and the
 "Not for this agent" list. This file only maps that definition to Cursor. It adds no rules; a change to the
 agent's behavior is made in the canonical file, with explicit approval (working rule 2).
 
 Shared rules the canonical file relies on: [platform.md](../../docs/architecture/platform.md),
 [repository-rules.md](../../docs/architecture/repository-rules.md),
-[engineering-rules.md](../../docs/development/engineering-rules.md),
+[engineering-rules.md](../../.claude/rules/engineering-rules.md),
 [git-workflow.md](../../docs/development/git-workflow.md) and
 [agent-pipeline.md](../../docs/development/agent-pipeline.md), plus the `AGENTS.md` of the repository you work in.
 

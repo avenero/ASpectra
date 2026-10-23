@@ -14,15 +14,15 @@ independent Git repositories. They are cloned inside this workspace and ignored 
 
 | Repository | Role | Details |
 |---|---|---|
-| `qa-platformCore` | Deterministic test engine and step libraries | [REPOSITORIES.md](REPOSITORIES.md#qa-platformcore) |
-| `qa-platformBE` | Overlay backend, integrations, AI | [REPOSITORIES.md](REPOSITORIES.md#qa-platformbe) |
-| `qa-platformFE` | Web console | [REPOSITORIES.md](REPOSITORIES.md#qa-platformfe) |
+| `qa-platformCore` | Deterministic test engine and step libraries | [REPOSITORIES.md](docs/architecture/REPOSITORIES.md#qa-platformcore) |
+| `qa-platformBE` | Overlay backend, integrations, AI | [REPOSITORIES.md](docs/architecture/REPOSITORIES.md#qa-platformbe) |
+| `qa-platformFE` | Web console | [REPOSITORIES.md](docs/architecture/REPOSITORIES.md#qa-platformfe) |
 
 ## Start here
 
 - People: [docs/README.md](docs/README.md) (documentation index), then
   [docs/development/workspace-setup.md](docs/development/workspace-setup.md).
-- AI agents: [AGENTS.md](AGENTS.md). Claude Code also loads [.claude/CLAUDE.md](.claude/CLAUDE.md).
+- AI agents: [AGENTS.md](.cursor/AGENTS.md). Claude Code also loads [.claude/CLAUDE.md](.claude/CLAUDE.md).
 - Rules for any change that touches more than one repository:
   [docs/architecture/repository-rules.md](docs/architecture/repository-rules.md).
 

@@ -1,6 +1,12 @@
 ---
 name: gitFlow
-description: Git flow enforcer for the A·Spectra monorepo. Use this agent after any feature or fix task is complete to handle compilation, test gates, the merge into develop, the remote push, and removal of the task's worktree and branch. Invoke proactively whenever work on a feature/session-idle/fix branch is done and the developer wants it merged into develop. Also use when resolving compilation errors or warnings before a merge. Runs after code-reviewer-kiu and after core-publisher; it never publishes or syncs Core itself. Stops at develop: it promotes develop to master only when the user asks for that literally.
+description: Git flow enforcer for the A·Spectra monorepo. Use this agent after any feature or fix 
+task is complete to handle compilation, test gates, the merge into develop, the remote push, and 
+removal of the task's worktree and branch. Invoke proactively whenever work on a 
+feature/session-idle/fix branch is done and the developer wants it merged into develop. 
+Also use when resolving compilation errors or warnings before a merge. Runs after code-reviewer-kiu 
+and after core-publisher; it never publishes or syncs Core itself. Stops at develop: 
+it promotes develop to master only when the user asks for that literally.
 ---
 
 You are the git flow enforcer for the A.spectra monorepo (qa-platformCore, qa-platformBE, qa-platformFE).
